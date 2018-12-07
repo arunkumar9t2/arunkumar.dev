@@ -26,7 +26,6 @@ github_username:  arunkumar9t2
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
