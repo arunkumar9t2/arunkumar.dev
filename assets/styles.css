@@ -19,12 +19,15 @@ body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
-.demo-avatar {
-    width: 100px;
-    height: 100px;
+.avatar {
+    width: 125px;
+    height: 125px;
     position: relative;
     overflow: hidden;
+    align-self: center;
     border-radius: 50%;
+    border: 2px solid;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .demo-layout .mdl-layout__header .mdl-layout__drawer-button {
@@ -60,7 +63,17 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 16px;
-    height: 25%;
+}
+
+.demo-drawer-header .avatar-name {
+    text-align: center;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.demo-drawer-header .avatar-about-text {
+    text-align: center;
+    font-family: inherit;
 }
 
 .demo-avatar-dropdown {
