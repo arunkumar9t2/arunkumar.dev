@@ -62,7 +62,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 16px;
+    padding: 32px 24px 32px 24px;
 }
 
 .demo-drawer-header .avatar-name {
@@ -108,34 +108,17 @@ body {
 }
 
 .demo-content {
+    width: 100%;
     max-width: 1080px;
 }
 
-.demo-charts {
-    align-items: center;
+.demo-content .wrapper {
+    width: 100%;
 }
 
-.demo-chart:nth-child(1) {
-    color: #ACEC00;
-}
-
-.demo-chart:nth-child(2) {
-    color: #00BBD6;
-}
-
-.demo-chart:nth-child(3) {
-    color: #BA65C9;
-}
-
-.demo-chart:nth-child(4) {
-    color: #EF3C79;
-}
-
-.demo-graphs {
-    padding: 16px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+.mdl-layout__header-row {
+    background-color: #00BCD4;
+    color: #37474F;
 }
 
 /* TODO: Find a proper solution to have the graphs
@@ -222,4 +205,20 @@ _:-ms-input-placeholder,
     display: flex;
     box-sizing: border-box;
     align-items: center;
+}
+
+.post {
+    width: 100%;
+    padding: 80px 56px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.post-meta {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.post-categories {
+    display: inline-block;
+    margin-bottom: 16px;
 }
