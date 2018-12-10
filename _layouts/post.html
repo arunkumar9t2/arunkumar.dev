@@ -4,7 +4,7 @@ layout: default
 <article class="post h-entry mdl-card mdl-shadow--2dp" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
         <h1 class="mdl-typography--display-3" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
+        <p class="post-meta mdl-color-text--grey-600">
             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                 {{ page.date | date: date_format }}

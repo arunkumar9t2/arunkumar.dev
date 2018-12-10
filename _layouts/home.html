@@ -6,26 +6,30 @@ layout: default
   {%- if page.title -%}
   <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
-
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <ul class="post-list">
+  <h2 class="mdl-typography--display-2">{{ page.list_title | default: "Posts" }}</h2>
+  <div class="mdl-grid">
     {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
+    <div class="post-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+      {%- assign date_format = "%b %-d, %Y" -%}
+      <span class="post-meta mdl-color-text--grey-600">{{ post.date | date: date_format }}</span>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">
           {{ post.title | escape }}
+        </h4>
+      </div>
+      <span class="post-card-content mdl-card__supporting-text">
+        {{ post.post_description }}
+      </span>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{post.url | relative_url}}">
+          Read More
         </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
-    </li>
+      </div>
+    </div>
     {%- endfor -%}
-  </ul>
+  </div>
   {%- endif -%}
 </div>
