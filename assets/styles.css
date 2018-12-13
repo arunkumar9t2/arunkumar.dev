@@ -121,6 +121,10 @@ body {
     color: #37474F;
 }
 
+.home .title {
+    padding-left: 16px;
+}
+
 .post {
     width: 100%;
     padding: 80px 56px;
