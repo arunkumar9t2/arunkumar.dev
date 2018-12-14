@@ -3,16 +3,15 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <h2 class="mdl-typography--display-2">{{ page.list_title | default: "Posts" }}</h2>
-  <div class="mdl-grid">
+  <div class="mdl-grid portfolio-max-width">
     {%- for post in site.posts -%}
-    <div class="post-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+    <div class="post-card mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+      <div class="mdl-card__media">
+        <img class="article-image" src="{{ post.hero-image }}" border="0" alt="" />
+      </div>
       {%- assign date_format = "%b %-d, %Y" -%}
       <span class="post-meta mdl-color-text--grey-600">{{ post.date | date: date_format }}</span>
       <div class="mdl-card__title">
@@ -20,11 +19,11 @@ layout: default
           {{ post.title | escape }}
         </h4>
       </div>
-      <span class="post-card-content mdl-card__supporting-text">
+      <span class="mdl-card__supporting-text post-card-content">
         {{ post.post_description }}
       </span>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{post.url | relative_url}}">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{post.url | relative_url}}">
           Read More
         </a>
       </div>

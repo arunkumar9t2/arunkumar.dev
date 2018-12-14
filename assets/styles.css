@@ -1,129 +1,175 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-html,
-body {
-    font-family: 'Roboto', 'Helvetica', sans-serif;
+.portfolio-header {
+    position: relative;
+    background-image: url(images/header-bg.jpg);
 }
 
-.avatar {
-    width: 125px;
-    height: 125px;
-    position: relative;
+.page-content {}
+
+.portfolio-header .mdl-layout__header-row {
+    padding: 0;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.mdl-layout__title {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.is-compact .mdl-layout__title span {
+    display: none;
+}
+
+.portfolio-logo-row {
+    min-height: 200px;
+}
+
+.is-compact .portfolio-logo-row {
+    min-height: auto;
+}
+
+.portfolio-logo {
+    background: url(images/arun.png) 50% no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+    margin: auto auto 10px;
     overflow: hidden;
     align-self: center;
     border-radius: 50%;
     border: 2px solid;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
-    color: rgba(0, 0, 0, 0.54);
-    background-color: #00BCD4
+.is-compact .portfolio-logo {
+    height: 50px;
+    width: 50px;
+    margin-top: 7px;
 }
 
-.mdl-layout__drawer .avatar {
-    margin-bottom: 16px;
+
+.portfolio-navigation-row {
+    background-color: rgba(0, 0, 0, 0.08);
+    text-transform: uppercase;
+    height: 45px;
 }
 
-.demo-drawer {
-    border: none;
-}
-
-/* iOS Safari specific workaround */
-.demo-drawer .mdl-menu__container {
-    z-index: -1;
-}
-
-.demo-drawer .demo-navigation {
-    z-index: -2;
-}
-
-/* END iOS Safari specific workaround */
-.demo-drawer .mdl-menu .mdl-menu__item {
-    display: flex;
-    align-items: center;
-}
-
-.demo-drawer-header {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px 24px 32px 24px;
-}
-
-.demo-drawer-header .avatar-name {
+.portfolio-navigation-row .mdl-navigation {
     text-align: center;
-    font-family: inherit;
-    margin-bottom: 20px;
+    max-width: 900px;
+    width: 100%;
 }
 
-.demo-drawer-header .avatar-about-text {
-    text-align: center;
-    font-family: inherit;
+.portfolio-navigation-row .mdl-navigation__link {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 42px;
 }
 
-.demo-avatar-dropdown {
-    display: flex;
+.portfolio-header .mdl-layout__drawer-button {
+    background-color: rgba(197, 197, 197, 0.44);
+}
+
+.portfolio-navigation-row .is-active {
     position: relative;
-    flex-direction: row;
+    font-weight: bold;
+}
+
+.portfolio-navigation-row .is-active:after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 64, 129);
+    left: 15%;
+}
+
+.portfolio-card .mdl-card__title {
+    padding-bottom: 0;
+}
+
+.portfolio-blog-card-full-bg {
+    background: url(images/example-blog03.jpg) center / cover;
+}
+
+.portfolio-blog-card-event-bg {
+    background: url(images/example-blog05.jpg) center / cover;
+}
+
+.portfolio-blog-card-strip-bg {
+    background: url(images/example-blog06.jpg) center / cover;
+}
+
+.portfolio-blog-card-compact .mdl-card__title {
+    padding-bottom: 0;
+}
+
+.portfolio-blog-card-bg>.mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+img.article-image {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-max-width {
+    max-width: 900px;
+    margin: auto;
+}
+
+.portfolio-copy {
+    max-width: 700px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-left-padding {
+    padding-left: 0;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.padding-top {
+    padding: 10px 0 0;
+}
+
+.portfolio-share-btn {
+    position: relative;
+    float: right;
+    top: -4px;
+}
+
+.demo-card-event>.mdl-card__actions {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.portfolio-contact .mdl-textfield {
     width: 100%;
 }
 
-.demo-navigation {
-    flex-grow: 1;
+.portfolio-contact form {
+    max-width: 550px;
+    margin: auto;
 }
 
-.demo-layout .demo-navigation .mdl-navigation__link {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.56);
-    font-weight: 500;
-}
-
-.demo-layout .demo-navigation .mdl-navigation__link:hover {
-    background-color: #00BCD4;
-    color: #37474F;
-}
-
-.demo-navigation .mdl-navigation__link .material-icons {
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0.56);
-    margin-right: 32px;
-}
-
-.demo-content {
-    max-width: 1080px;
-}
-
-.demo-content .wrapper {
-    width: 100%;
-}
-
-.mdl-layout__header-row {
-    background-color: #00BCD4;
-    color: #37474F;
-}
-
-.home .title {
-    padding-left: 16px;
-}
 
 .post {
     width: 100%;
@@ -158,4 +204,9 @@ body {
 .post-card .post-meta {
     padding: 16px 16px 0px 16px;
     font-size: 14px
+}
+
+footer {
+    background-image: url(images/footer-background.png);
+    background-size: cover;
 }

@@ -4,6 +4,7 @@ title:  "Introducing Lynket (previously Chromer)— A better way to browse on An
 date:   2018-12-07 01:12:38 +0530
 post_description: Introduction post about Lynket's major update
 categories: [Android]
+hero_image: https://cdn-images-1.medium.com/max/2000/1*9EiFLkWltIEqE59QIwBDBA.png
 ---
 
 For my first Medium article, I would like to introduce you to my open source Android app, **Chromer, **now called **Lynket.**
