@@ -46,24 +46,20 @@ layout: default
   <h4 class="portfolio-header mdl-color-text--grey-900">
     <span class="mdi mdi-library adb"></span> Open Soure Work
   </h4>
-  <div class="mdl-grid">
-    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-      <ul class="demo-list-item mdl-list">
+  <div class="mdl-grid open-source-work">
+    <div class="mdl-card open-source-work-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+      <ul class="open-source-work-list mdl-list">
+        {%- for library in site.open_source_work -%}
         <li class="mdl-list__item">
+          <span class="mdi mdi-circle-small mdl-color-text--grey-600"></span>
           <span class="mdl-list__item-primary-content">
-            Bryan Cranston
+            <b class="library-title">{{ library.name | escape }}</b> - {{ library.description }}
           </span>
+          <a href="{{library.github}}">
+            <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
+          </a>
         </li>
-        <li class="mdl-list__item">
-          <span class="mdl-list__item-primary-content">
-            Aaron Paul
-          </span>
-        </li>
-        <li class="mdl-list__item">
-          <span class="mdl-list__item-primary-content">
-            Bob Odenkirk
-          </span>
-        </li>
+        {%- endfor -%}
       </ul>
     </div>
   </div>

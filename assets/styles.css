@@ -367,3 +367,15 @@ footer {
     color: rgba(255, 255, 255, 0.56);
     margin-right: 32px;
 }
+
+.open-source-work .mdi {
+    font-size: 24px;
+}
+
+.open-source-work .mdl-list__item .library-title {
+    margin-right: 8px;
+}
+
+.open-source-work .open-source-work-card {
+    min-height: auto;
+}

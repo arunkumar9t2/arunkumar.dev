@@ -45,5 +45,7 @@ permalink: /:categories/:title/
 collections:
   android_apps:
     title : Android
+  open_source_work:
+    title: Open Source Work
     
 
