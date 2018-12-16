@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<div>
+<div class="portfolio-content">
   {{ content }}
-
-  <div class="mdl-grid portfolio-max-width">
-
+  <h4 class="portfolio-header mdl-color-text--grey-900">
+    <span class="mdi mdi-android android"></span> Android Side Projects
+  </h4>
+  <div class="mdl-grid">
     {%- for app in site.android_apps -%}
     <div class="app-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__media">
@@ -41,5 +42,29 @@ layout: default
       </div>
     </div>
     {%- endfor -%}
+  </div>
+  <h4 class="portfolio-header mdl-color-text--grey-900">
+    <span class="mdi mdi-library adb"></span> Open Soure Work
+  </h4>
+  <div class="mdl-grid">
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+      <ul class="demo-list-item mdl-list">
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">
+            Bryan Cranston
+          </span>
+        </li>
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">
+            Aaron Paul
+          </span>
+        </li>
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">
+            Bob Odenkirk
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -147,10 +147,19 @@ img.article-image {
     height: 175px;
 }
 
-.portfolio-max-width {
-    max-width: 900px;
+.portfolio-content {
+    max-width: 1000px;
     margin: auto;
 }
+
+.portfolio-content .portfolio-header {
+    margin: 16px 0 0 16px;
+}
+
+.portfolio-content .portfolio-header .mdi {
+    margin-right: 8px;
+}
+
 
 .portfolio-copy {
     max-width: 700px;
@@ -257,16 +266,24 @@ img.article-image {
     margin: 0 8px 0 8px;
 }
 
-.app-card .app-links .mdi.github:hover {
+.mdi.android {
+    color: #a4c639;
+}
+
+
+.mdi.adb {
+    color: #ffdb58;
+}
+
+.mdi.github:hover {
     color: #000 !important;
 }
 
-.app-card .app-links .mdi.playstore:hover {
+.mdi.playstore:hover {
     color: #34a853 !important;
 }
 
-
-.app-card .app-links .mdi.youtube:hover {
+.mdi.youtube:hover {
     color: #ff0000 !important;
 }
 
