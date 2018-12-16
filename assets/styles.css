@@ -39,6 +39,11 @@ body {
     font-weight: 300;
 }
 
+.mdl-card__supporting-text {
+    color: rgba(0, 0, 0, .60);
+    font-weight: 500;
+}
+
 .is-compact .mdl-layout__title span {
     display: none;
 }
