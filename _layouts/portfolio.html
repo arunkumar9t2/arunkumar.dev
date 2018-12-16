@@ -21,15 +21,21 @@ layout: default
         {{ app.description }}
       </span>
       <div class="app-links mdl-card__actions mdl-card--border">
+        {% if app.playstore %}
+        <a href="{{app.playstore}}">
+          <span class="mdi mdi-google-play mdl-color-text--grey-600 playstore"></span>
+        </a>
+        {% endif %}
+
         {% if app.github %}
         <a href="{{app.github}}">
           <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
         </a>
         {% endif %}
 
-        {% if app.playstore %}
-        <a href="{{app.playstore}}">
-          <span class="mdi mdi-google-play mdl-color-text--grey-600 playstore"></span>
+        {% if app.youtube %}
+        <a href="{{app.youtube}}">
+          <span class="mdi mdi-youtube mdl-color-text--grey-600 youtube"></span>
         </a>
         {% endif %}
       </div>

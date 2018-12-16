@@ -211,6 +211,10 @@ img.article-image {
     display: flex;
 }
 
+.app-card .mdl-card__title-text {
+    font-weight: 400;
+}
+
 .app-card .app-links {
     margin-top: auto;
     display: flex;
@@ -236,7 +240,16 @@ img.article-image {
     color: #34a853 !important;
 }
 
+
+.app-card .app-links .mdi.youtube:hover {
+    color: #ff0000 !important;
+}
+
 footer {
     background-image: url(images/footer-background.png);
     background-size: cover;
+}
+
+.mdl-mini-footer {
+    padding: 8px;
 }
