@@ -6,5 +6,3 @@ playstore : https://play.google.com/store/apps/details?id=arun.com.chromer&utm_s
 github: https://github.com/arunkumar9t2/lynket-browser
 youtube: https://www.youtube.com/watch?v=PbB6ChrkMnE
 ---
-
-Lynket browser is an awesome browser.
