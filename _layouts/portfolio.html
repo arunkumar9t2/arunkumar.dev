@@ -5,30 +5,35 @@ layout: default
 <div>
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
   <div class="mdl-grid portfolio-max-width">
-    {%- for post in site.posts -%}
-    <div class="post-card mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+
+    {%- for app in site.android_apps -%}
+    <div class="app-card mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__media">
-        <img class="article-image" src="{{ post.hero_image }}" border="0" alt="" />
+        <img class="article-image" src="{{ app.hero_image | prepend: site.baseurl}}" border="0" alt="" />
       </div>
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <span class="post-meta mdl-color-text--grey-600">{{ post.date | date: date_format }}</span>
       <div class="mdl-card__title">
         <h4 class="mdl-card__title-text">
-          {{ post.title | escape }}
+          {{ app.name | escape }}
         </h4>
       </div>
       <span class="mdl-card__supporting-text post-card-content">
-        {{ post.post_description }}
+        {{ app.description }}
       </span>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{post.url | relative_url}}">
-          Read More
+      <div class="app-links mdl-card__actions mdl-card--border">
+        {% if app.github %}
+        <a href="{{app.github}}">
+          <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
         </a>
+        {% endif %}
+
+        {% if app.playstore %}
+        <a href="{{app.playstore}}">
+          <span class="mdi mdi-google-play mdl-color-text--grey-600 playstore"></span>
+        </a>
+        {% endif %}
       </div>
     </div>
     {%- endfor -%}
   </div>
-  {%- endif -%}
 </div>

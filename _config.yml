@@ -44,7 +44,6 @@ permalink: /:categories/:title/
 # Collections
 collections:
   android_apps:
-    output : true
     title : Android
     
 
