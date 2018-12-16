@@ -10,7 +10,7 @@ layout: default
     {%- for post in site.posts -%}
     <div class="post-card mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__media">
-        <img class="article-image" src="{{ post.hero-image }}" border="0" alt="" />
+        <img class="article-image" src="{{ post.hero_image }}" border="0" alt="" />
       </div>
       {%- assign date_format = "%b %-d, %Y" -%}
       <span class="post-meta mdl-color-text--grey-600">{{ post.date | date: date_format }}</span>
