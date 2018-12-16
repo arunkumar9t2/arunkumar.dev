@@ -14,17 +14,17 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-                    <a class="mdl-navigation__link" href="blog.html">Blog</a>
-                    <a class="mdl-navigation__link" href="about.html">About</a>
-                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <a class="mdl-navigation__link {% if page.navigation_name == 'portfolio' %}is-active{% endif %}" href="{{site.url}}">Portfolio</a>
+                    <a class="mdl-navigation__link {% if page.navigation_name == 'blog' %}is-active{% endif %}" href="/blog/">Blog</a>
+                    <a class="mdl-navigation__link {% if page.navigation_name == 'about' %}is-active{% endif %}" href="/about/">About</a>
+                    <a class="mdl-navigation__link {% if page.navigation_name == 'contact' %}is-active{% endif %}" href="contact.html">Contact</a>
                 </nav>
             </div>
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-                <a class="mdl-navigation__link" href="blog.html">Blog</a>
+                <a class="mdl-navigation__link is-active" href="{{site.url}}">Portfolio</a>
+                <a class="mdl-navigation__link" href="/blog/">Blog</a>
                 <a class="mdl-navigation__link" href="about.html">About</a>
                 <a class="mdl-navigation__link" href="contact.html">Contact</a>
             </nav>
@@ -33,17 +33,6 @@
             <div class="page-content">
                 {{ content }}
             </div>
-            <footer class="mdl-mini-footer">
-                <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">Simple portfolio website</div>
-                </div>
-                <div class="mdl-mini-footer__right-section">
-                    <ul class="mdl-mini-footer__link-list">
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Privacy & Terms</a></li>
-                    </ul>
-                </div>
-            </footer>
         </main>
     </div>
 </body>
