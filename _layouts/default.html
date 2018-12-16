@@ -4,37 +4,42 @@
 {%- include head.html -%}
 
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-        <header class="mdl-layout__header mdl-layout__header portfolio-header">
-            <div class="mdl-layout__header-row portfolio-logo-row">
-                <span class="mdl-layout__title">
-                    <div class="portfolio-logo mdl-shadow--4dp"></div>
-                    <span class="mdl-layout__title">Simple portfolio website</span>
-                </span>
-            </div>
-            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link {% if page.navigation_name == 'portfolio' %}is-active{% endif %}" href="{{site.url}}">Portfolio</a>
-                    <a class="mdl-navigation__link {% if page.navigation_name == 'blog' %}is-active{% endif %}" href="/blog/">Blog</a>
-                    <a class="mdl-navigation__link {% if page.navigation_name == 'about' %}is-active{% endif %}" href="/about/">About</a>
-                    <a class="mdl-navigation__link {% if page.navigation_name == 'contact' %}is-active{% endif %}" href="contact.html">Contact</a>
-                </nav>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+        <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title mdl-page-title">{{page.navigation_name}}</span>
+                <div class="mdl-layout-spacer"></div>
             </div>
         </header>
-        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="{{site.url}}">Portfolio</a>
-                <a class="mdl-navigation__link" href="/blog/">Blog</a>
-                <a class="mdl-navigation__link" href="/about/">About</a>
-                <a class="mdl-navigation__link" href="contact.html">Contact</a>
+        <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+            <header class="demo-drawer-header">
+                <img src="/assets/images/arun.png" class="avatar">
+                <div class="avatar-name mdl-typography--headline">Arunkumar Sampathkumar</div>
+                <div class="avatar-about-text mdl-typography--body-1-color-contrast">I am a passionate Software
+                    Engineer currently focusing my efforts on the
+                    Android platform. This is my personal blog and portfolio. Views expressed here are mine.</div>
+            </header>
+            <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+                <a class="mdl-navigation__link {% if page.navigation_name == 'portfolio' %}is-active{% endif %}" href="{{site.url}}">
+                    <span class="mdi mdi-bulletin-board material-icons"></span>Portfolio
+                </a>
+                <a class="mdl-navigation__link {% if page.navigation_name == 'blog' %}is-active{% endif %}" href="/blog/">
+                    <span class="mdi mdi-book-open-variant material-icons"></span>Blog
+                </a>
+                <a class="mdl-navigation__link {% if page.navigation_name == 'about' %}is-active{% endif %}" href="/about/">
+                    <span class="mdi mdi-account-details material-icons"></span>About
+                </a>
+                <a class="mdl-navigation__link {% if page.navigation_name == 'contact' %}is-active{% endif %}" href="contact.html">
+                    <span class="mdi mdi-email material-icons"></span>Contact
+                </a>
+                <div class="mdl-layout-spacer"></div>
             </nav>
         </div>
-        <main class="mdl-layout__content">
+        <main class="mdl-layout__content mdl-color--grey-100 " aria-label="Content">
             <div class="page-content">
                 {{ content }}
             </div>
         </main>
-        {%- include footer.html -%}
     </div>
 </body>
 

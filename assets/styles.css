@@ -3,7 +3,28 @@
     background-image: url(images/header-bg.jpg);
 }
 
+html,
+body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
 .page-content {}
+
+.mdl-page-title {
+    text-transform: capitalize;
+}
+
+.avatar {
+    width: 125px;
+    height: 125px;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    border-radius: 50%;
+    border: 2px solid;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin-bottom: 16px;
+}
 
 .portfolio-header .mdl-layout__header-row {
     padding: 0;
@@ -220,11 +241,10 @@ img.article-image {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    min-height: 60px;
 }
 
 .app-card .app-links .mdi {
-    font-size: 36px;
+    font-size: 24px;
     display: block;
 }
 
@@ -250,6 +270,78 @@ footer {
     background-size: cover;
 }
 
+.mdl-layout__header-row {
+    background-color: #00BCD4;
+    color: #37474F;
+}
+
 .mdl-mini-footer {
     padding: 8px;
+}
+
+.demo-drawer {
+    border: none;
+}
+
+/* iOS Safari specific workaround */
+.demo-drawer .mdl-menu__container {
+    z-index: -1;
+}
+
+.demo-drawer .demo-navigation {
+    z-index: -2;
+}
+
+/* END iOS Safari specific workaround */
+.demo-drawer .mdl-menu .mdl-menu__item {
+    display: flex;
+    align-items: center;
+}
+
+.demo-drawer-header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 24px 32px 24px;
+}
+
+.demo-drawer-header .avatar-name {
+    text-align: center;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.demo-drawer-header .avatar-about-text {
+    text-align: center;
+    font-family: inherit;
+}
+
+
+.demo-navigation {
+    flex-grow: 1;
+}
+
+.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
+    color: rgba(0, 0, 0, 0.54);
+    background-color: #00BCD4
+}
+
+.demo-layout .demo-navigation .mdl-navigation__link {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.56);
+    font-weight: 500;
+}
+
+.demo-layout .demo-navigation .mdl-navigation__link:hover {
+    background-color: #00BCD4;
+    color: #37474F;
+}
+
+.demo-navigation .mdl-navigation__link .material-icons {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.56);
+    margin-right: 32px;
 }
