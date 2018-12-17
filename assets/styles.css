@@ -266,6 +266,14 @@ img.article-image {
     margin: 0 8px 0 8px;
 }
 
+.app-card .mdl-card__supporting-text p {
+    color: rgba(0, 0, 0, .60);
+    font-weight: 500;
+}
+
+.app-card .mdl-card__supporting-text a {
+    font-weight: 400;
+}
 
 .library-card .mdl-card__title-text {
     font-weight: 400;
