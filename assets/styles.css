@@ -291,7 +291,6 @@ img.article-image {
     color: #a4c639;
 }
 
-
 .mdi.adb {
     color: #ffdb58;
 }
@@ -306,6 +305,14 @@ img.article-image {
 
 .mdi.youtube:hover {
     color: #ff0000 !important;
+}
+
+.mdi.publication {
+    color: #F44336;
+}
+
+.mdi.open-link:hover {
+    color: #F44336;
 }
 
 footer {
@@ -395,4 +402,25 @@ footer {
 
 .open-source-work .open-source-work-card {
     min-height: auto;
+}
+
+.publication-card .mdl-card {
+    min-height: auto;
+}
+
+.publication-card .mdl-card__menu {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.publication-card .mdl-card__title-text {
+    font-weight: 400;
+    margin-right: 50px;
+    font-size: 22px;
+}
+
+.publication-card .mdl-card__menu .mdi {
+    font-size: 24px;
+    display: block;
 }
