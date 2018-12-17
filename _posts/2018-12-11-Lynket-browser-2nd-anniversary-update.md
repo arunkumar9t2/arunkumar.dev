@@ -7,12 +7,9 @@ categories: [Android, Apps]
 hero_image: https://cdn-images-1.medium.com/max/2000/1*9EiFLkWltIEqE59QIwBDBA.png
 ---
 
+*This post originally appeared on [Medium](https://medium.com/@arunkumar9t2/introducing-chromer-2-0-a-better-way-to-browse-on-android-c34ff729df1b).*
   
-
-*This post originally appear on [Medium](https://medium.com/@arunkumar9t2/introducing-chromer-2-0-a-better-way-to-browse-on-android-c34ff729df1b).*
-
-  
-I would like to introduce you to my open source Android app **Chromer, now called Lynket.** As you might have guessed from the title it is a *browser*. You are probably thinking, given how mature Android’s browser scene is with Google Chrome, Brave, Firefox, Opera, Samsung Internet and many others, is another browser app really necessary? **Let’s find out.**
+I would like to introduce you to my open source Android app **Chromer, now called Lynket.** In this article, I want to talk about how Lynket does things differently and tries to remain relevant among top browsers such as Chrome, Brave, Firefox, Samsung Internet or Opera etc.
 
 <center><iframe  width="560"  height="315"  src="https://www.youtube.com/embed/PbB6ChrkMnE"  frameborder="0"  allowfullscreen></iframe></center>
   
