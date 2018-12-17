@@ -8,6 +8,11 @@ body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
 .mdl-page-title {
     text-transform: capitalize;
 }
@@ -437,9 +442,18 @@ footer {
     padding: 0px 56px 80px 56px;
 }
 
+.demo-layout.is-small-screen .post-container .post-content .post-article {
+    padding: 40px 28px;
+}
+
 .post-container .post-content .post-header>:not(:first-child) {
     margin-left: 56px;
     margin-right: 56px;
+}
+
+.demo-layout.is-small-screen .post-container .post-content .post-header>:not(:first-child) {
+    margin-left: 28px;
+    margin-right: 28px;
 }
 
 .post-container .post-categories {
@@ -451,5 +465,15 @@ footer {
 }
 
 .post-container .post-header-image {
+    width: 100%;
+}
+
+.post-container .caption {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.post-container img.fill {
     width: 100%;
 }
