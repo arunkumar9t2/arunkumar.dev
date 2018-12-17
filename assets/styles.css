@@ -266,6 +266,27 @@ img.article-image {
     margin: 0 8px 0 8px;
 }
 
+
+.library-card .mdl-card__title-text {
+    font-weight: 400;
+}
+
+.library-card .library-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.library-card .library-links .mdi {
+    font-size: 24px;
+    display: block;
+}
+
+.library-card .library-links a {
+    margin: 0 8px 0 8px;
+}
+
 .mdi.android {
     color: #a4c639;
 }
@@ -370,10 +391,6 @@ footer {
 
 .open-source-work .mdi {
     font-size: 24px;
-}
-
-.open-source-work .mdl-list__item .library-title {
-    margin-right: 8px;
 }
 
 .open-source-work .open-source-work-card {

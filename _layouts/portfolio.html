@@ -44,23 +44,27 @@ layout: default
     {%- endfor -%}
   </div>
   <h4 class="portfolio-header mdl-color-text--grey-900">
-    <span class="mdi mdi-library adb"></span> Open Soure Work
+    <span class="mdi mdi-library adb"></span> Android Libraries
   </h4>
   <div class="mdl-grid open-source-work">
-    <div class="mdl-card open-source-work-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-      <ul class="open-source-work-list mdl-list">
-        {%- for library in site.open_source_work -%}
-        <li class="mdl-list__item">
-          <span class="mdi mdi-circle-small mdl-color-text--grey-600"></span>
-          <span class="mdl-list__item-primary-content">
-            <b class="library-title">{{ library.name | escape }}</b> - {{ library.description }}
-          </span>
-          <a href="{{library.github}}">
-            <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
-          </a>
-        </li>
-        {%- endfor -%}
-      </ul>
+    {%- for library in site.open_source_work -%}
+    <div class="library-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">
+          {{ library.name | escape }}
+        </h4>
+      </div>
+      <span class="mdl-card__supporting-text">
+        {{ library.description }}
+      </span>
+      <div class="library-links mdl-card__actions mdl-card--border">
+        {% if library.github %}
+        <a href="{{library.github}}">
+          <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
+        </a>
+        {% endif %}
+      </div>
     </div>
+    {%- endfor -%}
   </div>
 </div>
