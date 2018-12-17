@@ -16,7 +16,7 @@
 title: Arunkumar Sampathkumar
 email: arunk.beece@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog and portfolio
+  Blog and Portfolio
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: arunkumar_9t2
@@ -40,6 +40,18 @@ permalink: /:categories/:title/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: ""      
+      type: posts
+    values:
+      is_post: true
+  - scope:
+      path: ""      
+      type: pages
+    values:
+      is_post: false
 
 # Collections
 collections:

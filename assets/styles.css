@@ -8,8 +8,6 @@ body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
-.page-content {}
-
 .mdl-page-title {
     text-transform: capitalize;
 }
@@ -239,7 +237,8 @@ img.article-image {
 
 .post-card .post-meta {
     padding: 16px 16px 0px 16px;
-    font-size: 14px
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .app-card {
@@ -431,4 +430,9 @@ footer {
 .publication-card .mdl-card__menu .mdi {
     font-size: 24px;
     display: block;
+}
+
+.blog-content {
+    max-width: 1000px;
+    margin: auto;
 }

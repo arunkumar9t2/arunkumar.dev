@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<div>
+<div class="blog-content">
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <div class="mdl-grid portfolio-max-width">
+  <div class="mdl-grid">
     {%- for post in site.posts -%}
-    <div class="post-card mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+    <div class="post-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__media">
         <img class="article-image" src="{{ post.hero_image }}" border="0" alt="" />
       </div>

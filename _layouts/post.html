@@ -10,6 +10,7 @@ layout: default
                 {{ page.date | date: date_format }}
             </time>
         </p>
+        {%- if site.posts.categories > 0 -%}
         <div class="post-categories">
             Tagged in
             {% if post %}
@@ -22,6 +23,7 @@ layout: default
             {% unless forloop.last %}&nbsp;{% endunless %}
             {% endfor %}
         </div>
+        {%- endif -%}
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
