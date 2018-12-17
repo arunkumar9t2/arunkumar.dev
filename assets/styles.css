@@ -204,21 +204,10 @@ img.article-image {
     margin: auto;
 }
 
-
-.post {
-    width: 100%;
-    padding: 80px 56px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
 .post-meta {
     font-family: 'Roboto Mono', monospace;
-}
-
-.post-categories {
-    display: inline-block;
-    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .post-card {
@@ -234,11 +223,8 @@ img.article-image {
     font-weight: 400
 }
 
-
 .post-card .post-meta {
     padding: 16px 16px 0px 16px;
-    font-size: 14px;
-    font-weight: 500;
 }
 
 .app-card {
@@ -435,4 +421,35 @@ footer {
 .blog-content {
     max-width: 1000px;
     margin: auto;
+}
+
+.post-container {
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+}
+
+.post-container .post-content {
+    border-radius: 2px;
+}
+
+.post-container .post-content .post-article {
+    padding: 0px 56px 80px 56px;
+}
+
+.post-container .post-content .post-header>:not(:first-child) {
+    margin-left: 56px;
+    margin-right: 56px;
+}
+
+.post-container .post-categories {
+    margin-top: 48px;
+}
+
+.post-container h2 {
+    margin-top: 48px;
+}
+
+.post-container .post-header-image {
+    width: 100%;
 }

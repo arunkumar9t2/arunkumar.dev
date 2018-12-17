@@ -27,7 +27,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
-permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -47,6 +47,7 @@ defaults:
       type: posts
     values:
       is_post: true
+      navigation_name: Blog
   - scope:
       path: ""      
       type: pages
