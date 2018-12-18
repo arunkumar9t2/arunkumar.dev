@@ -1,6 +1,6 @@
 <div class="mdl-grid" style="justify-content: center;">
     <div class="mdl-cell mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--12-col-phone">
         <img src="{{ include.url }}" alt="{{ include.caption | escape }}" width="100%" />
-        <div class="mdl-typography--caption caption">{{ include.caption | markdownify }}</div>
+        {% include images_caption.html caption=include.caption %}
     </div>
 </div>

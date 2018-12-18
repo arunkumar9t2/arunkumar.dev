@@ -6,8 +6,6 @@ categories: [Android, Libraries]
 image: https://cdn-images-1.medium.com/max/2000/1*6aGUGICoIOKY3gqfryNRRg.png
 ---
 
-### Motion
-
 Material Design’s announcement at Google IO 2014 redefined Android UX. New emphasis were given to **motion** and the guidelines encouraged using motion as a tool to be expressive and adding character to your app.
 
 > **Motion provides meaning**
@@ -22,7 +20,7 @@ On the technical side of things, for the first time `Android Lollipop` used a se
 
 Before Android Lollipop, **Kitkat introduced Scenes & Transitions API** which were an abstraction on top of Animations to reduce effort required for simple animations. Basically it was possible to give a start and end layout and the framework would animate the difference.
 
-{% include images_full_width.html url="https://cdn-images-1.medium.com/max/2000/1*eN_khPCZ-qb67y1P_Zw8sA.png" caption="https://developer.android.com/training/transitions/" %}
+{% include images_center.html url="https://cdn-images-1.medium.com/max/2000/1*eN_khPCZ-qb67y1P_Zw8sA.png" caption="https://developer.android.com/training/transitions/" %}
 
 In order to let the framework animate simple changes, all we must do is to call `TransitionManager.beginDelayedTransition(veiwGroup)` before changing the layout and the framework would take care of animating the difference. I recommend reading this [article](https://medium.com/google-developers/transitions-in-the-android-support-library-8bc86a1d688e) by [Andrey Kulikov](https://medium.com/@andkulikov), which covers different types of animations you could do with the framework.
 
