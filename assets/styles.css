@@ -1,6 +1,5 @@
 .portfolio-header {
     position: relative;
-    background-image: url(images/header-bg.jpg);
 }
 
 html,
@@ -59,24 +58,11 @@ img[src*='#center'] {
     min-height: auto;
 }
 
-.portfolio-logo {
-    background: url(images/arun.png) 50% no-repeat;
-    background-size: cover;
-    height: 120px;
-    width: 120px;
-    margin: auto auto 10px;
-    overflow: hidden;
-    align-self: center;
-    border-radius: 50%;
-    border: 2px solid;
-}
-
 .is-compact .portfolio-logo {
     height: 50px;
     width: 50px;
     margin-top: 7px;
 }
-
 
 .portfolio-navigation-row {
     background-color: rgba(0, 0, 0, 0.08);
@@ -120,18 +106,6 @@ img[src*='#center'] {
 
 .portfolio-card .mdl-card__title {
     padding-bottom: 0;
-}
-
-.portfolio-blog-card-full-bg {
-    background: url(images/example-blog03.jpg) center / cover;
-}
-
-.portfolio-blog-card-event-bg {
-    background: url(images/example-blog05.jpg) center / cover;
-}
-
-.portfolio-blog-card-strip-bg {
-    background: url(images/example-blog06.jpg) center / cover;
 }
 
 .portfolio-blog-card-compact .mdl-card__title {
@@ -311,11 +285,6 @@ img.article-image {
 
 .mdi.open-link:hover {
     color: #F44336;
-}
-
-footer {
-    background-image: url(images/footer-background.png);
-    background-size: cover;
 }
 
 .mdl-layout__header-row {

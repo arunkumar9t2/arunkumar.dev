@@ -9,18 +9,23 @@ layout: default
                 <div>
                     <img class="post-header-image" src="{{ page.image }}" border="0" />
                 </div>
+
                 <div class="mdl-color-text--grey-500 post-categories">
-                    Tagged in &nbsp;
                     {% if post %}
                     {% assign categories = post.categories %}
                     {% else %}
                     {% assign categories = page.categories %}
+                    {% endif %}
+
+                    {% if categories.size > 0 %}
+                    Tagged in &nbsp;
                     {% endif %}
                     {% for category in categories %}
                     <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="mdl-color-text--grey-500">{{category}}</a>
                     {% unless forloop.last %}&nbsp;{% endunless %}
                     {% endfor %}
                 </div>
+
                 <h2 class="">{{ page.title | escape }}</h2>
                 <p class="post-meta mdl-color-text--grey-600">
                     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
