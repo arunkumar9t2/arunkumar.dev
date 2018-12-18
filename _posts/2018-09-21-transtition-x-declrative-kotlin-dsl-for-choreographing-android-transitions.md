@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Meet Transition X — Declarative Kotlin DSL for choreographing Android Transitions"
+title:  "Transition X — Declarative Kotlin DSL for choreographing Android Transitions"
 description: An Android library for simplifying transitions with a custom Kotlin DSL. 
 categories: [Android, Libraries]
 image: https://cdn-images-1.medium.com/max/2000/1*6aGUGICoIOKY3gqfryNRRg.png
@@ -8,11 +8,12 @@ image: https://cdn-images-1.medium.com/max/2000/1*6aGUGICoIOKY3gqfryNRRg.png
 
 Material Design’s announcement at Google IO 2014 redefined Android UX. New emphasis were given to **motion** and the guidelines encouraged using motion as a tool to be expressive and adding character to your app.
 
+
+From [Material.io:](https://material.io/design/motion/understanding-motion.html#usage)
+
 > **Motion provides meaning**
 > Motion focuses attention and maintains continuity, through subtle feedback and coherent transitions. As elements appear on screen, they transform and reorganize the environment, with interactions generating new transformations.
 
-[**Understanding motion**
-*Motion helps make a UI expressive and easy to use. Principles Motion helps orient users by showing how elements are…*material.io](https://material.io/design/motion/understanding-motion.html#usage)
 
 On the technical side of things, for the first time `Android Lollipop` used a separate thread (`RenderThread`) to handle animations even if there are delays in main thread. Introduction of RenderThread allowed things like `Circular Reveal Animation`, `AnimatedVectorDrawables`, `Ripple Feedback` without noticeable slowdowns.
 
@@ -29,8 +30,10 @@ In order to let the framework animate simple changes, all we must do is to call 
 What Kotlin has to do with transitions and Material Motion? *Let’s find out.*
 
 Material Choreography provides certain guidelines on how these animations should play; namely **ordering, easing, duration and type.**
-[**Choreography**
-*Complex layout changes use shared transformation to create smooth transitions from one layout to the next. Elements are…*material.io](https://material.io/design/motion/choreography.html#)
+
+[**Choreography**](https://material.io/design/motion/choreography.html#)
+
+> Complex layout changes use shared transformation to create smooth transitions from one layout to the next. Elements are grouped together and transform as a single unit, rather than animating independently, avoiding multiple transformations that overlap and compete for attention.
 
 The transition framework is already capable of [this](https://developer.android.com/reference/android/support/transition/Transition). But the boilerplate required for choreographing detailed transition were immense. Let’s take an example. Android lets us create [TransitionSet](https://developer.android.com/reference/android/support/transition/TransitionSet) instance by using XML as shown below.
 
@@ -84,7 +87,7 @@ Breaking down the code above:
 
 * **slide:** Internally adds a `Slide` animation which triggers when view visibility changes. Like fab this transition is exclusively set to affect `snackbarMessage` alone.
 
-* **decelerateEasing():** Adds a `LinearOutSlowInInterpolator` on this transition.
+* **decelerateEasing:** Adds a `LinearOutSlowInInterpolator` on this transition.
 
 ##### Advanced Choreography:
 
@@ -135,8 +138,6 @@ Like any framework, `Transition` does have some [limitations](https://developer.
 
 ### Conclusion
 
-I strongly believe Transition X style DSL reduces complexity and simplifies workflow when working with transitions. The aim of this library is to increase exposure to the Transition framework and unlock their potential using Kotlin’s language features. The entire library and a sample app with basic transition are available in the below repo.
-[**arunkumar9t2/transition-x**
-*Declarative Kotlin DSL for choreographing Android transitions - arunkumar9t2/transition-x*github.com](https://github.com/arunkumar9t2/transition-x)
+I strongly believe Transition X style DSL reduces complexity and simplifies workflow when working with transitions. The aim of this library is to increase exposure to the Transition framework and unlock their potential using Kotlin’s language features. The entire library and a sample app with basic transitions are available in this [repo](https://github.com/arunkumar9t2/transition-x).
 
 If you have any feedback on the project, I would be happy to hear from you in the comments below or on [Twitter](https://twitter.com/arunkumar_9t2) or on [Google+](https://plus.google.com/u/0/+arunkumar5592).
