@@ -14,6 +14,7 @@ github_username:  arunkumar9t2
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-gist
 
 permalink: /:year/:month/:day/:title
 

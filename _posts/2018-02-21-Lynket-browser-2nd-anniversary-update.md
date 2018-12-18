@@ -3,7 +3,7 @@ layout: post
 title:  "Introducing Lynket (previously Chromer)— A better way to browse on Android"
 description: Introduction post about Lynket's major update and feature walkthrough.
 categories: [Android, Apps]
-hero_image: https://cdn-images-1.medium.com/max/2000/1*9EiFLkWltIEqE59QIwBDBA.png
+image: https://cdn-images-1.medium.com/max/2000/1*9EiFLkWltIEqE59QIwBDBA.png
 ---
 
 *This post originally appeared on [Medium](https://medium.com/@arunkumar9t2/introducing-chromer-2-0-a-better-way-to-browse-on-android-c34ff729df1b).*
