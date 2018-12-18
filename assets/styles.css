@@ -379,7 +379,7 @@ footer {
     display: flex !important;
     flex-direction: row;
     align-items: center;
-    color: rgba(255, 255, 255, 0.56);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
 }
 
@@ -388,10 +388,15 @@ footer {
     color: #37474F;
 }
 
+
 .demo-navigation .mdl-navigation__link .material-icons {
     font-size: 24px;
-    color: rgba(255, 255, 255, 0.56);
+    color: rgba(255, 255, 255, 0.85);
     margin-right: 32px;
+}
+
+.demo-layout .demo-navigation .mdl-navigation__link:hover .material-icons {
+    color: #37474F;
 }
 
 .open-source-work .mdi {
