@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Introducing Lynket (previously Chromer)— A better way to browse on Android"
-date:   2018-12-07 01:12:38 +0530
-post_description: Introduction post about Lynket's major update
+description: Introduction post about Lynket's major update and feature walkthrough.
 categories: [Android, Apps]
 hero_image: https://cdn-images-1.medium.com/max/2000/1*9EiFLkWltIEqE59QIwBDBA.png
 ---
@@ -35,7 +34,7 @@ Without saying, Custom Tabs is much superior to WebView. It is updated through P
 
 ### Enter Chromer
 
-In December 2015, I [launched](https://plus.google.com/u/0/+arunkumar5592/posts/CQmK1kRgHSh) Chromer which enabled **any app to use Chrome Custom Tabs without the apps’ developer effort.** I was motivated to develop Chromer since apps that I use took a long time to implement CCT. It quickly grew to be liked by many users currently sitting at 4.6 rating from 8000+ reviewers.
+In December 2015, I [launched](https://plus.google.com/u/0/+arunkumar5592/posts/CQmK1kRgHSh) Chromer which enabled any app to use Chrome Custom Tabs *without the apps’ developer effort.* I was motivated to develop Chromer since apps that I use took a long time to implement CCT. It quickly grew to be liked by many users currently sitting at 4.6 rating from 8000+ reviewers.
 
 ### 2.0 — Anniversary Update and Lynket
 
@@ -43,7 +42,7 @@ Things change — Google has constantly improved the browsing experience and I a
 
 Unfortunately, Chromer’s name had to be changed to comply with Play Store policies since it resembles Chrome. It was never my intention to imitate Chrome in anyway. I deliberately kept the icons different and made it clear in the description that initial versions required Chrome to work. Google rejected the update even though app had been live for 2 years with multiple updates in the past.
 
-Lynket, the new name is derived from **Tabs** in Italian — Linguetta. With that said, can Lynket still offer a better browsing experience?
+Lynket, the new name is derived from **Tabs** in Italian — `Linguetta`. With that said, can Lynket still offer a better browsing experience?
 
 I would like to walk through certain different things I have tried in Lynket to improve your browsing experience.
 
@@ -156,9 +155,7 @@ By using Custom Tabs API in innovative ways, I believe Lynket offers a superior 
 Best of all, Lynket is **fully free and open source**. You can find the source code [here.](https://github.com/arunkumar9t2/lynket-browser) If you are a developer, I would be glad to accept contributions.
 
 <a href='https://play.google.com/store/apps/details?id=arun.com.chromer&utm_source=arunkumarsampath.in&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-<img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png#center' width="30%"/>
+<img alt='Get it on Google Play' class="google-play-img" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png#center'/>
 </a>
-
-Meanwhile, you can follow me on [Google+](https://plus.google.com/u/0/+arunkumar5592), [Twitter](https://twitter.com/arunkumar_9t2), [LinkedIn](https://www.linkedin.com/in/arunkumar9t2/), and try my other Android apps on [Play Store.](https://play.google.com/store/apps/dev?id=9082544673727889961)
 
 Until next time!

@@ -478,7 +478,9 @@ footer {
     width: 100%;
 }
 
-.post-article p, ul, ol {
+.post-article p,
+.post-article ul,
+.post-article ol {
     font-size: 16px;
 }
 
@@ -487,7 +489,7 @@ footer {
     padding-left: 8px;
 }
 
-.post-article blockquote p{
+.post-article blockquote p {
     font-size: 16px;
     font-weight: 300;
     font-style: italic;
@@ -505,4 +507,12 @@ footer {
     position: absolute;
     left: -0em;
     content: '';
+}
+
+.demo-layout.is-small-screen .post-article .google-play-img {
+    width: 70%;
+}
+
+.post-article .google-play-img {
+    width: 40%;
 }
