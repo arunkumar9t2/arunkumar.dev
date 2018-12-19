@@ -19,6 +19,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jemoji
+  - jekyll-sitemap
 
 permalink: /:year/:month/:day/:title
 
