@@ -159,3 +159,5 @@ Best of all, Lynket is **fully free and open source**. You can find the source c
 </a>
 
 Until next time!
+
+---

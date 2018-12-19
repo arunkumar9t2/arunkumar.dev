@@ -413,7 +413,7 @@ img.article-image {
 }
 
 .post-container .post-content .post-article {
-    padding: 0px 56px 80px 56px;
+    padding: 0px 56px 28px 56px;
 }
 
 .demo-layout.is-small-screen .post-container .post-content .post-article {
@@ -489,4 +489,16 @@ img.article-image {
 
 .post-article .google-play-img {
     width: 40%;
+}
+
+.disqus-comments {
+    padding-left: 56px;
+    padding-right: 56px;
+    padding-bottom: 56px;
+}
+
+.demo-layout.is-small-screen .disqus-comments {
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 28px;
 }

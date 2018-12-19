@@ -141,3 +141,6 @@ Like any framework, `Transition` does have some [limitations](https://developer.
 I strongly believe Transition X style DSL reduces complexity and simplifies workflow when working with transitions. The aim of this library is to increase exposure to the Transition framework and unlock their potential using Kotlin’s language features. The entire library and a sample app with basic transitions are available in this [repo](https://github.com/arunkumar9t2/transition-x).
 
 If you have any feedback on the project, I would be happy to hear from you in the comments below or on [Twitter](https://twitter.com/arunkumar_9t2) or on [Google+](https://plus.google.com/u/0/+arunkumar5592).
+
+
+---
