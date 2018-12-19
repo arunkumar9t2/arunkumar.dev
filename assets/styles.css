@@ -417,7 +417,7 @@ img.article-image {
 }
 
 .demo-layout.is-small-screen .post-container .post-content .post-article {
-    padding: 40px 28px;
+    padding: 0px 28px 40px 28px;
 }
 
 .post-container .post-content .post-header>:not(:first-child) {

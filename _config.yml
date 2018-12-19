@@ -18,6 +18,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-gist
+  - jemoji
 
 permalink: /:year/:month/:day/:title
 
