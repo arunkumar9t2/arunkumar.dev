@@ -4,11 +4,11 @@ email: arunk.beece@gmail.com
 description: >-
   Blog and Portfolio
 baseurl: ""
-url: "" 
+url: "https://www.arunkumarsampath.in" 
 author: "@arunkumar_9t2"
 
-twitter_username: arunkumar_9t2
-github_username:  arunkumar9t2
+disqus:
+  shortname: arunkumarsampath-in
 
 # Build settings
 markdown: kramdown
@@ -29,12 +29,14 @@ defaults:
       type: posts
     values:
       is_post: true
+      comments: true
       navigation_name: Blog
   - scope:
       path: ""      
       type: pages
     values:
       is_post: false
+      comments: false
 
 # Collections
 collections:

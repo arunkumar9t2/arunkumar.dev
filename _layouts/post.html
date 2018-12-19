@@ -38,14 +38,7 @@ layout: default
             <div class="post-article" itemprop="articleBody">
                 {{ content }}
             </div>
-
-            {% if site.disqus %}
-            <div>
-                <h3>Comments</h3>
-                {% include disqus.html %}
-            </div>
-            {% endif %}
-
+            {% include disqus_comments.html %}
             <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
         </article>
     </div>
