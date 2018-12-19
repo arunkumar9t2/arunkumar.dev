@@ -21,7 +21,7 @@ plugins:
   - jemoji
   - jekyll-sitemap
 
-permalink: /:year/:month/:day/:title
+permalink: /:title/
 
 # Defaults
 defaults:
