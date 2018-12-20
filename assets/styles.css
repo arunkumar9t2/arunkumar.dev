@@ -295,6 +295,10 @@ img.article-image {
     color: #1da1f2 !important;
 }
 
+.mdi.rss:hover {
+    color: #f26522 !important;
+}
+
 .mdl-layout__header-row {
     background-color: #00BCD4;
     color: #37474F;
@@ -434,6 +438,22 @@ img.article-image {
 .blog-content {
     max-width: 1000px;
     margin: auto;
+}
+
+.rss-feed-container {
+    display: flex;
+    padding: 8px;
+    flex-direction: row;
+    align-items: center
+}
+
+.rss-feed-container .rss-item {
+    display: block;
+}
+
+.rss-feed-container .rss-item .material-icons {
+    color: #37474F;
+    font-size: 28px;
 }
 
 .post-container {
