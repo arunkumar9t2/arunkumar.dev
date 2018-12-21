@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Dagger Recipes: Illustrative step by step guide to achieving constructor injection
+title: 'Dagger Recipes: Illustrative step by step guide to achieve constructor injection
   in WorkManager'
-description : Step by step guide to configure your Android project to enable constructor injecton in Jetpack's WorkManager.
+description : Step by step walkthrough of dagger concepts like exposing bindings, dagger errors, multibindings and subcomponents to achieve constructor injection in WorkManager instances.
 categories: [Android, Dagger]
 date: 2018-12-20 22:14 +0530
 ---
@@ -383,6 +383,7 @@ The changes for above sections are done in this [commit](https://github.com/arun
 
 {% include images_center.html url="/assets/images/dagger-workmanager-6.png" caption="Constructor injection in Worker instance"%}
 
+The entire source of the sample app with working injection can be found [here](https://github.com/arunkumar9t2/dagger-workmanager).
 
 ### Summary
 
