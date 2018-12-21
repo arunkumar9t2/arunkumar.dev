@@ -5,6 +5,7 @@ title: 'Dagger Recipes: Illustrative step by step guide to achieve constructor i
 description : Step by step walkthrough of dagger concepts like exposing bindings, dagger errors, multibindings and subcomponents to achieve constructor injection in WorkManager instances.
 categories: [Android, Dagger]
 date: 2018-12-20 22:14 +0530
+image : /assets/images/dagger-workmanager-header.png
 ---
 
 Recently, while working on an app, I decided to try out Jetpack's WorkManager for all background jobs (it's pretty great :+1:). The app already uses Dagger 2 for DI and I wanted to carry that over to WorkManager as well when executing jobs.
