@@ -391,4 +391,4 @@ In this article, we discussed a way to configure dagger for advanced cases where
 
 ### Misc
 
-Thanks for following through till the end of the article. Liked what you read? I would be glad to receive feedback or criticism if any. If you do have any review comments/feedback please reach out to me or express in the comments below.
+Thanks for following through till the end of the article. Liked what you read? I would be glad to receive feedback or criticism if any. If you do have any review comments/feedback please reach out to me or express in the comments below. I plan to write more about practical uses of Dagger in this Recipes series.
