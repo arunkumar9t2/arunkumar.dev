@@ -472,7 +472,7 @@ img.article-image {
 }
 
 .demo-layout.is-small-screen .post-container .post-content .post-article {
-    padding: 0px 28px 40px 28px;
+    padding: 0px 16px 40px 16px;
 }
 
 .post-container .post-content .post-header>:not(:first-child) {
@@ -481,8 +481,8 @@ img.article-image {
 }
 
 .demo-layout.is-small-screen .post-container .post-content .post-header>:not(:first-child) {
-    margin-left: 28px;
-    margin-right: 28px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .post-container .post-categories {
@@ -553,7 +553,7 @@ img.article-image {
 }
 
 .demo-layout.is-small-screen .disqus-comments {
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-bottom: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
 }
