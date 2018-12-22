@@ -118,7 +118,7 @@ public abstract @Nullable ListenableWorker createWorker(
             @NonNull WorkerParameters workerParameters);
 ```
 
-Before we discuss about exposing `workerParameters` binding, let's get the setting custom `WorkerFactory` instance out of the way. WorkManager uses a `ContentProvider` by default to intialize itself (that's how it gets `application` context). We can disable this by using `tools:remove="node"` in AndroidManifest.
+Before we discuss about exposing `workerParameters` as a binding, let's get the setting custom `WorkerFactory` instance out of the way. WorkManager uses a `ContentProvider` by default to intialize itself (that's how it gets `application` context). We can disable this by using `tools:node="remove"` in AndroidManifest.
 
 #### Setting custom WorkerFactory instances
 
@@ -179,6 +179,7 @@ interface WorkerSubcomponent {
 
     @Subcomponent.Builder
     interface Builder {
+
         @BindsInstance
         fun workerParameters(param: WorkerParameters) : Builder
 
@@ -189,7 +190,7 @@ interface WorkerSubcomponent {
 
 ##### Connecting AppComponent and WorkerSubcomponent
 
-In order to let `AppComponent` know the `WorkerSubComponent`, it is sufficient to write an abstract method that returns `WorkSubComponent`'s `Builder` in `AppComponent`. This is important since **without this `WorkerSubComponent` won't inherit `Application` or `WordsRepository` etc**. 
+In order to let `AppComponent` know the `WorkerSubComponent`, it is sufficient to write an abstract method that returns `WorkSubComponent`'s `Builder` in `AppComponent`. This is important since **without this `WorkerSubComponent` won't inherit `Application` or `WordsRepository` etc**.
 
 Udpated AppComponent:
 
@@ -203,7 +204,7 @@ Udpated AppComponent:
     ]
 )
 interface AppComponent : AndroidInjector<WorkManagerApp> {
-    
+
     // Establish WorkerSubcomponent as subcomponent
     fun workerSubcomponentBuilder(): WorkerSubcomponent.Builder
 
@@ -216,25 +217,25 @@ interface AppComponent : AndroidInjector<WorkManagerApp> {
 }
 ```
 
-Let us visualize the update binding graph now.
+Let us visualize the updated binding graph now.
 
 {% include images_center.html url="/assets/images/dagger-workmanager-5.png" caption="Final binding graph to HelloWorldWorker's dependencies"%}
 
 
 ### Connecting the dots
 
-Now since we have a approach to provide a full graph, let's look into how to use in and actually automate instantiating instances and let `WorkManager` use them.
+Now since we have a approach to provide a full graph, let's look into how to use it and actually automate instantiating instances and let `WorkManager` use them.
 
 #### DaggerWokerFactory - custom worker factory
 
 We will start with writing our DaggerWorkerFactory which has following resonsibilities
 
 * With `workerParameters` create a subcomponent and complete binding graph for `Worker` instances.
-* With `workerClassName` instantiate the `Worker` instance and return it for `WorkerManager` to use. 
+* With `workerClassName` instantiate the `Worker` instance and return it for `WorkerManager` to use.
 
-##### Creating the workerSubcomponent
+##### Creating the WorkerSubcomponent
 
-Since we already declared `AppComponent.workerSubcomponentBuilder()`, we can directly request an instance in constructor and use it to create `WorkerSubComponent`. Note that the Dagger maintains the internal implementation of the builders. Covering that is beyond the scope of the article.
+Since we already declared `AppComponent.workerSubcomponentBuilder()` in `AppComponent`, we can directly request an instance in constructor and use it to create `WorkerSubComponent`. Note that the Dagger maintains the internal implementation of the builders. Covering that is beyond the scope of the article.
 
 ```kotlin
 @Singleton
@@ -259,9 +260,9 @@ After creating the subcomponent, creating the instance with `workerClassName` st
 
 ##### Creating instances with class name
 
-Dagger already has a mechanism to request dependencies by their type. Within Dagger, it is done using `Provider<Type>`, by calling `provider.get()` we can get an instance of `Type`. To create Worker instance with class name, all we need is `Provider<HelloWorldWorker>`. 
+Dagger already has a mechanism to request dependencies by their type. Within Dagger, it is done using `Provider<Type>` and by calling `provider.get()` we can get an instance of `Type`. To create Worker instance with class name, all we need is `Provider<HelloWorldWorker>`.
 
-Note: We can't get a `Provider<T>` without a complete graph for `T`. Which means for a incomplete graph, compilaton fails and `Provider<T>` is not generated at all.
+**Note**: We can't get a `Provider<T>` without a complete graph for `T`. Which means for a incomplete graph, compilaton fails and `Provider<T>` is not generated at all.
 
 In order to write it in a generic way i.e using this `DaggerWorkerFactory` for instantiating all available `Workers` in the app, we will have to do it without hardcoding `HelloWorldWorker` type.
 
@@ -282,7 +283,7 @@ In order to get `Map<Class<out RxWorker>, Provider<RxWorker>>`, we have to confi
 annotation class WorkManagerKey(val value: KClass<out RxWorker>)
 ```
 
-In order to let dagger generate this map instance, we have to declare the multibinding generating code in any `@Module`. My personal preference to add it as a `Builder` class inside the class that participates in map generation, in this case `HelloWorldWorker`.
+For dagger to generate this map instance, we have to declare the multibinding generating code in any `@Module`. My personal preference to add it as a `Builder` class inside the class that participates in map generation, in this case `HelloWorldWorker`.
 
 Updated `HelloWorldWorker`:
 
@@ -314,7 +315,7 @@ constructor(
 }
 ```
 
-If you remember, in order for binding graph to be complete, the `WorkerParameters` exposed and generated map bindings should be in the same component. Since `WorkerSubComponent` is responsible for exposing `WorkerParameters` we will install the multibinding module to `WorkerSubComponent` as follows.
+If you remember, for binding graph to be complete, the `WorkerParameters` exposed and generated map bindings should be in the same component. Since `WorkerSubComponent` is responsible for exposing `WorkerParameters` we will install the multibinding module to `WorkerSubComponent` as follows.
 
 ```kotlin
 @Subcomponent(modules = [HelloWorldWorker.Builder::class])
@@ -324,6 +325,7 @@ interface WorkerSubcomponent {
 
     @Subcomponent.Builder
     interface Builder {
+
         @BindsInstance
         fun workerParameters(param: WorkerParameters): Builder
 
@@ -389,7 +391,6 @@ The entire source of the sample app with working injection can be found [here](h
 ### Summary
 
 In this article, we discussed a way to configure dagger for advanced cases where a dependency instance can be accessed only during runtime. In `WorkManager`, we get to know about `WorkerParameter` only at the time of initialization by `WorkerFactory`. In order to handle this case, we break down our root component to sub components and pass in the required type (workParameters) as parameter to a subcomponent. Then we use `Multibindings` to instantiate the instances. The implemented solution is a generic one and as long as all `Worker`s have a multibinding generator, the injection will work for all available `Workers`. Since the initialization happens in `onCreate` of the application, even when the `WorkManager` wakes up the application to do jobs, the custom factory we provided would be set.
-
 
 ### Misc
 
