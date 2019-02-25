@@ -109,7 +109,7 @@ Looks like Dagger cannot find `WorkerParameters` instance but it did not complai
 
 ### WorkerFactory
 
-Since one of the recent releases, Google added something called `WorkerFactory` whose implementation is used to instantiate `Worker`s. It is possible to provide a custom isntance via `WorkManager.initialize`. `WorkerFactory` has `createWorker` nethod which has all the information we need.
+Since one of the recent releases, Google added something called `WorkerFactory` whose implementation is used to instantiate `Worker`s. It is possible to provide a custom isntance via `WorkManager.initialize`. `WorkerFactory` has `createWorker` method which has all the information we need.
 
 ```java
 public abstract @Nullable ListenableWorker createWorker(
