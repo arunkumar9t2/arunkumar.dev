@@ -5,5 +5,5 @@ description: A live wallpaper that adapts its color to your surroundings by usin
 github: https://github.com/arunkumar9t2/chameleon-live-wallpaper
 playstore: https://play.google.com/store/apps/details?id=arun.com.chameleonskinforkwlp&utm_source=arunkumarsampath.in
 youtube: https://www.youtube.com/watch?v=Zy2YGSccM1g
-ordering: 3
+ordering: 6
 ---

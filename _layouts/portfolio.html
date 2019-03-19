@@ -4,7 +4,7 @@ layout: default
 
 <div class="portfolio-content">
   {{ content }}
-  <h4 class="portfolio-header mdl-color-text--grey-900">
+  <h4 class="portfolio-header mdl-color-text--grey-900" id="androidapps">
     <span class="mdi mdi-android android"></span> Android Side Projects
   </h4>
   <div class="mdl-grid">
@@ -15,9 +15,9 @@ layout: default
         <img class="article-image" src="{{ app.hero_image | prepend: site.baseurl}}" border="0" alt="" />
       </div>
       <div class="mdl-card__title">
-        <h4 class="mdl-card__title-text">
+        <h5 class="mdl-card__title-text">
           {{ app.name | escape }}
-        </h4>
+        </h5>
       </div>
       <span class="mdl-card__supporting-text">
         {{ app.description | markdownify }}
@@ -44,7 +44,7 @@ layout: default
     </div>
     {%- endfor -%}
   </div>
-  <h4 class="portfolio-header mdl-color-text--grey-900">
+  <h4 class="portfolio-header mdl-color-text--grey-900" id="androidlibraries">
     <span class="mdi mdi-library adb"></span> Android Libraries
   </h4>
   <div class="mdl-grid open-source-work">
@@ -52,9 +52,9 @@ layout: default
     {%- for library in libraries -%}
     <div class="library-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__title">
-        <h4 class="mdl-card__title-text">
+        <h5 class="mdl-card__title-text">
           {{ library.name | escape }}
-        </h4>
+        </h5>
       </div>
       <span class="mdl-card__supporting-text">
         {{ library.description }}
@@ -69,15 +69,15 @@ layout: default
     </div>
     {%- endfor -%}
   </div>
-  <h4 class="portfolio-header mdl-color-text--grey-900">
+  <h4 class="portfolio-header mdl-color-text--grey-900" id="publications">
     <span class="mdi mdi-book-open-page-variant publication"></span> Academic
   </h4>
   <div class="mdl-grid publication-card">
     <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
       <div class="mdl-card__title">
-        <h6 class="mdl-card__title-text">
+        <h5 class="mdl-card__title-text">
           FPGA implementation of CCSDS BCH (63, 56) for Satellite Communication
-        </h6>
+        </h5>
       </div>
       <div class="mdl-card__supporting-text">
         Published in <a href="https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6504611">2012 IEEE International Conference on Electronics Design, Systems and Applications (ICEDSA)</a>
