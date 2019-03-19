@@ -305,6 +305,10 @@ img.article-image {
     color: #37474F;
 }
 
+.mdl-layout__header-row .mdl-navigation .mdl-navigation__link {
+    font-weight: 600;
+}
+
 .mdl-mini-footer {
     padding: 8px;
 }

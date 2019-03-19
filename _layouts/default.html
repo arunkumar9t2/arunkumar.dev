@@ -9,6 +9,12 @@
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title mdl-page-title">{{page.navigation_name}}</span>
                 <div class="mdl-layout-spacer"></div>
+                {% if page.navigation_name == 'portfolio' %}
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link mdl-color-text--blue-grey-800" href="#androidapps">APPS</a>
+                    <a class="mdl-navigation__link mdl-color-text--blue-grey-800" href="#opensource">OPEN SOURCE</a>
+                </nav>
+                {% endif %}
                 <div class="rss-feed-container">
                     <a class="rss-item" href="{{site.url}}/feed.xml">
                         <span class="mdi mdi-rss rss material-icons "></span>
@@ -22,7 +28,9 @@
                 <div class="avatar-name mdl-typography--headline">Arunkumar Sampathkumar</div>
                 <div class="avatar-about-text mdl-typography--body-1-color-contrast">I am a passionate Software
                     Engineer currently focusing my efforts on the
-                    Android platform. This is my personal blog and portfolio. Views expressed here are mine.</div>
+                    Android platform. This is my personal blog and portfolio.
+                    </br>
+                    <br>Views expressed here are mine.</br></div>
                 <div class="avatar-links">
                     <a href="https://twitter.com/arunkumar_9t2">
                         <span class="mdi mdi-twitter twitter mdl-color-text--grey-300"></span>
