@@ -9,6 +9,14 @@ My personal website and blog.
 
 See full `jekyll` guide [here](https://jekyllrb.com/).
 
+# Technologies
+
+* `[rouge](https://github.com/jneen/rouge)` syntax highlighter
+* Material Design Lite. [getmdl](https://getmdl.io/started/).
+* Google Analytics
+* Material Design [Icons](https://materialdesignicons.com/).
+* Minimal JS.
+
 # Editor
 
 Preferred editor is VS Code. The repo has a `tasks.json` file to add few custom build tasks to VS Code. Namely `firebase serve` and `jekyll serve`.
