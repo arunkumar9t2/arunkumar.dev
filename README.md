@@ -5,6 +5,7 @@ My personal website and blog.
 
 * Setup ruby on your system.
 * Run `gem install bundler jekyll` to install Jekyll.
+* `bundle exec jekyll serve` to run development version.
 
 See full `jekyll` guide [here](https://jekyllrb.com/).
 
