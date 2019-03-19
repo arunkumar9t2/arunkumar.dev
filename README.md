@@ -11,7 +11,7 @@ See full `jekyll` guide [here](https://jekyllrb.com/).
 
 # Technologies
 
-* `[rouge](https://github.com/jneen/rouge)` syntax highlighter
+* [rouge](https://github.com/jneen/rouge) syntax highlighter.
 * Material Design Lite. [getmdl](https://getmdl.io/started/).
 * Google Analytics
 * Material Design [Icons](https://materialdesignicons.com/).
