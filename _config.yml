@@ -4,7 +4,7 @@ email: arunk.beece@gmail.com
 description: >-
   Blog and Portfolio
 baseurl: ""
-url: "https://www.arunkumarsampath.in" 
+url: "https://www.arunkumar.dev"
 author: "@arunkumar_9t2"
 
 disqus:
@@ -26,14 +26,14 @@ permalink: /:title/
 # Defaults
 defaults:
   - scope:
-      path: ""      
+      path: ""
       type: posts
     values:
       is_post: true
       comments: true
       navigation_name: Blog
   - scope:
-      path: ""      
+      path: ""
       type: pages
     values:
       is_post: false
@@ -42,8 +42,6 @@ defaults:
 # Collections
 collections:
   android_apps:
-    title : Android
+    title: Android
   open_source_work:
     title: Open Source Work
-    
-
