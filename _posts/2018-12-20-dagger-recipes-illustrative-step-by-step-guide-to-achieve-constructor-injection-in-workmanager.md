@@ -228,7 +228,7 @@ Now since we have a approach to provide a full graph, let's look into how to use
 
 #### DaggerWokerFactory - custom worker factory
 
-We will start with writing our DaggerWorkerFactory which has following resonsibilities
+We will start with writing our DaggerWorkerFactory which has following responsibilities
 
 * With `workerParameters` create a subcomponent and complete binding graph for `Worker` instances.
 * With `workerClassName` instantiate the `Worker` instance and return it for `WorkerManager` to use.
