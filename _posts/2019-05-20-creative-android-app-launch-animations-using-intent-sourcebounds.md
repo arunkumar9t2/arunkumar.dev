@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Creative Android app launch animations using Intent Source Bounds
+description: Explores various ways Intent's SourceBounds field can be used to peform seamless transition from homescreen icon to your app content. 
 date: 2019-05-20 01:53 +0800
 categories: [Android]
+image : /assets/images/intent-source-bounds-header.png
 ---
 The title of this article refers to Android [Intent](https://developer.android.com/reference/android/content/Intent) class's field `mSourceBounds`. Surprisingly the documentation for this field is sparse and I have not seen many apps taking advantage of this field. In this article, I will attempt to decode the intention (pun intended) behind Source Bounds and provide ways it can be used in context of animations.
 
