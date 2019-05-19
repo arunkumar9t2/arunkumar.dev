@@ -317,6 +317,8 @@ fun View.screenBounds(action: (Rect) -> Unit) {
 
 In this article, `sourceBounds` from `Intent` was introduced and was explored in context of animations. Inferring home screen icon location for animations opens up new ways to innovatively welcome users on to your app. I believe small UX details like can help in differentiating your app. Although not a core focus, `TransitionManager` for choreographing perfomant animations was shown and it proves to be simpler and concise way to animate changes instead of dealing with many object animators. Using source bounds for entry animations can scale well in the future since the app only only relies on the location. For example, if Android OS is updated to include hardware button location when app is launched via button, then app automatically respects it and shows a nice animation originating from the hardware button.
 
+The sample application source code can be found [here](https://github.com/arunkumar9t2/blog-resources/tree/master/intent-source-bounds).
+
 Do you have any other idea for using sourceBounds or any feedback on the content? Please let me know in the comments below.
 
 **-- Arun**
