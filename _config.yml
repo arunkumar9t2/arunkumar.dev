@@ -45,3 +45,6 @@ collections:
     title: Android
   open_source_work:
     title: Open Source Work
+
+sass:
+  style: compact 
