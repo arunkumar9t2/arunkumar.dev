@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post-container mdl-grid">
     <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-    <div class="post-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+    <div class="post-content mdl-color--white mdl-shadow--2dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
         <article class="" itemscope itemtype="http://schema.org/BlogPosting">
             <header class="post-header">
                 <div>
@@ -27,12 +27,15 @@ layout: default
                 </div> -->
 
                 <h2 class="">{{ page.title | escape }}</h2>
-                <p class="post-meta mdl-color-text--grey-600">
+                {% if page.is_post == false %}
+                <div class="post-meta mdl-color-text--grey-600">
                     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                         {{ page.date | date: date_format }}
                     </time>
-                </p>
+                    {% include reading_time.html content=content %}
+                </div>
+                {% endif %}
             </header>
 
             <div class="post-article" itemprop="articleBody">
