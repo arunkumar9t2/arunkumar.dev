@@ -2,33 +2,29 @@
 layout: default
 ---
 
-<div class="blog-content">
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-  <div class="mdl-grid">
-    {%- for post in site.posts -%}
-    <div class="post-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
-      <div class="mdl-card__media">
-        <img class="article-image" src="{{ post.image }}" border="0" alt="" />
-      </div>
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <span class="post-meta mdl-color-text--grey-600">{{ post.date | date: date_format }}</span>
-      <div class="mdl-card__title">
-        <h4 class="mdl-card__title-text">
-          {{ post.title | escape }}
-        </h4>
-      </div>
-      <span class="mdl-card__supporting-text post-card-content">
-        {{ post.description }}
-      </span>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{post.url | relative_url}}">
-          Read More
-        </a>
-      </div>
+{%- if site.posts.size > 0 -%}
+<div class="mdl-grid blog-content">
+  {%- for post in site.posts -%}
+  <div class="post-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+    <div class="mdl-card__media">
+      <img class="article-image" src="{{ post.image }}" border="0" alt="" />
     </div>
-    {%- endfor -%}
+    {%- assign date_format = "%b %-d, %Y" -%}
+    <span class="post-meta mdl-color-text--grey-600">{{ post.date | date: date_format }}</span>
+    <div class="mdl-card__title post-card-title">
+      <h4 class="mdl-card__title-text">
+        {{ post.title | escape }}
+      </h4>
+    </div>
+    <span class="mdl-card__supporting-text post-card-content">
+      {{ post.description }}
+    </span>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{post.url | relative_url}}">
+        Read More
+      </a>
+    </div>
   </div>
-  {%- endif -%}
+  {%- endfor -%}
 </div>
+{%- endif -%}
