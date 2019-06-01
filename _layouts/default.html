@@ -4,17 +4,11 @@
 {%- include head.html -%}
 
 <body>
-    <div class="demo-layout mdl-layout mdl-js-layout {% if page.is_post == false %} mdl-layout--fixed-drawer {% endif %} mdl-layout--fixed-header">
-        <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+    <div class="root-layout mdl-layout mdl-js-layout {% if page.is_post == false %} mdl-layout--fixed-drawer {% endif %} mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title mdl-page-title">{{page.navigation_name}}</span>
                 <div class="mdl-layout-spacer"></div>
-                {% if page.navigation_name == 'portfolio' %}
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link mdl-color-text--blue-grey-800" href="#androidapps">APPS</a>
-                    <a class="mdl-navigation__link mdl-color-text--blue-grey-800" href="#opensource">OPEN SOURCE</a>
-                </nav>
-                {% endif %}
                 <div class="rss-feed-container">
                     <a class="rss-item" href="{{site.url}}/feed.xml">
                         <span class="mdi mdi-rss rss material-icons "></span>
@@ -22,8 +16,8 @@
                 </div>
             </div>
         </header>
-        <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-            <header class="demo-drawer-header">
+        <div class="portfolio-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+            <header class="portfolio-drawer-header">
                 <img src="/assets/images/arun.png" class="avatar">
                 <div class="avatar-name mdl-typography--headline">Arunkumar Sampathkumar</div>
                 <div class="avatar-about-text mdl-typography--body-1-color-contrast">I am a passionate Software
@@ -46,7 +40,7 @@
                     </a>
                 </div>
             </header>
-            <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+            <nav class="portfolio-navigation mdl-navigation mdl-color--blue-grey-800">
                 <a class="mdl-navigation__link {% if page.navigation_name == 'portfolio' %}is-active{% endif %}" href="{{site.url}}">
                     <span class="mdi mdi-bulletin-board material-icons"></span>Portfolio
                 </a>
@@ -60,9 +54,7 @@
             </nav>
         </div>
         <main class="mdl-layout__content mdl-color--grey-100 " aria-label="Content">
-            <div class="page-content">
-                {{ content }}
-            </div>
+            {{ content }}
         </main>
     </div>
 </body>
