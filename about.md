@@ -1,7 +1,6 @@
 ---
 layout: post
 navigation_name: about
-is_post: true
 image : /assets/images/about-header.jpg
 permalink: /about/
 comments: false
