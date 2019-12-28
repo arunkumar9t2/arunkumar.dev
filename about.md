@@ -17,6 +17,6 @@ During the day, I work with *[Grab](https://www.grab.com/sg/)* as a Mobile Platf
 Contact:
 
 * Github: [arunkumar9t2](https://github.com/arunkumar9t2)
-* Email: [arunk.beece@gmail.com](mailto:arunk.beece@gmail.com)
+* Email: [hi@arunkumar.dev](mailto:hi@arunkumar.dev)
 * LinkedIn: [arunkumar9t2](https://www.linkedin.com/in/arunkumar9t2/)
 * Twitter: [@arunkumar_9t2](https://twitter.com/arunkumar_9t2)

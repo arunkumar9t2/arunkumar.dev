@@ -1,6 +1,6 @@
 # Meta
 title: Arunkumar Sampathkumar
-email: arunk.beece@gmail.com
+email: hi@arunkumar.dev
 description: >-
   Blog and Portfolio
 baseurl: ""
@@ -47,4 +47,4 @@ collections:
     title: Open Source Work
 
 sass:
-  style: compact 
+  style: compact
