@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Introducing Scabbard: Easily visualize Dagger 2 dependency graphs'
-description: An Intellij/Gradle plugin to easily visualize and understand Dagger 2 graphs from IDE.
+description: An IntelliJ/Gradle plugin to easily visualize and understand Dagger 2 graphs from within IDE.
 date: 2019-12-28 09:43 +0800
 categories: [Android, Dagger, Library]
 image : /assets/images/scabbard-banner.png
