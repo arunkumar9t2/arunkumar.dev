@@ -17,3 +17,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem 'jekyll-compose', group: [:jekyll_plugins]
 gem 'jekyll-gist'
 gem 'jemoji'
+gem "nokogiri", ">= 1.10.4"
+gem "activesupport", ">= 4.1.11"
