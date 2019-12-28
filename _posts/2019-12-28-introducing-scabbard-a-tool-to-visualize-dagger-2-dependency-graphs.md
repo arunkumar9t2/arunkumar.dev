@@ -9,13 +9,22 @@ image : /assets/images/scabbard-banner.png
 
 I am excited to announce [Scabbard](https://arunkumar9t2.github.io/scabbard/), a tool to visualize Dagger 2 dependency graphs. Here's Scabbard in action:
 
-{% include gfycat_embed.html url="https://gfycat.com/ifr/thankfulconfusedkillifish" %}
+<video width="100%" controls>
+  <source src="https://github.com/arunkumar9t2/scabbard/raw/master/docs/video/ViewComponent.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 Here is an advanced example from Google's I/O 19 app.
 
-{% include gfycat_embed.html url="https://gfycat.com/ifr/ignorantscrawnylemming" %}
+<video width="100%" controls>
+  <source src="https://github.com/arunkumar9t2/scabbard/raw/master/docs/video/iosched_appcomponent.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 Apart from ensuring runtime safety, one of the advantages of a compile-time framework for dependency injection is that the entire graph of dependencies can be known at compile time even before binary is generated. This enables features like compilation errors when there are missing bindings which is a very good step towards reducing developer mistakes. But the cost we pay for that is the mental effort of knowing all the bindings, knowing current scope, navigating errors to make dagger happy etc. Very soon we realize there is a visualization problem here and it is evident from many dagger tutorial articles which tries to visualize the dagger structure in their own ways to convey the message. I tried to tackle this problem with Scabbard.
+
+### Download
 
 Please follow [Getting Started](https://arunkumar9t2.github.io/scabbard/) guide on the project website to start generating graphs right away. Hopefully you would have graphs by the time you finish reading this article.
 
