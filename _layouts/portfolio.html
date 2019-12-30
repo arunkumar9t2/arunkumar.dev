@@ -8,7 +8,7 @@ layout: default
     <span class="mdi mdi-android android"></span> Android Projects
   </h4>
   <div class="mdl-grid">
-    {% assign apps = site.android_apps | sort: 'ordering' %}
+    {% assign apps = site.apps | sort: 'ordering' %}
     {%- for app in apps -%}
     <div class="app-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__media">
@@ -48,7 +48,7 @@ layout: default
     <span class="mdi mdi-library adb"></span> Android Libraries
   </h4>
   <div class="mdl-grid open-source-work">
-    {% assign libraries = site.open_source_work | sort: 'ordering' %}
+    {% assign libraries = site.os | sort: 'ordering' %}
     {%- for library in libraries -%}
     <div class="library-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__title">

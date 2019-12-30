@@ -41,9 +41,9 @@ defaults:
 
 # Collections
 collections:
-  android_apps:
+  apps:
     title: Android
-  open_source_work:
+  os:
     title: Open Source Work
 
 sass:
