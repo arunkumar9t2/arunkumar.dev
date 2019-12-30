@@ -310,6 +310,10 @@ img.article-image {
     color: #34a853 !important;
   }
 
+  &.mail:hover {
+    color: #D44638 !important;
+  }
+
   &.youtube:hover {
     color: #ff0000 !important;
   }
@@ -600,4 +604,10 @@ img.article-image {
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 16px;
+}
+
+video {
+  width: 95%;
+  margin: 10px auto;
+  display: block;
 }

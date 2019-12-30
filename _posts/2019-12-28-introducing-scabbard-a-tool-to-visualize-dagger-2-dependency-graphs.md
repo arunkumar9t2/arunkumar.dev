@@ -14,13 +14,12 @@ I am excited to announce [Scabbard](https://arunkumar9t2.github.io/scabbard/), a
   Your browser does not support the video tag.
 </video>
 
-Here is an advanced example from Google's I/O 19 app.
+Here is an advanced example from [Google's I/O 19](https://github.com/google/iosched) app:
 
 <video width="100%" controls>
   <source src="https://github.com/arunkumar9t2/scabbard/raw/master/docs/video/iosched_appcomponent.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
 
 Apart from ensuring runtime safety, one of the advantages of a compile-time framework for dependency injection is that the entire graph of dependencies can be known at compile time even before binary is generated. This enables features like compilation errors when there are missing bindings which is a very good step towards reducing developer mistakes. But the cost we pay for that is the mental effort of knowing all the bindings, knowing current scope, navigating errors to make dagger happy etc. Very soon we realize there is a visualization problem here and it is evident from many dagger tutorial articles which tries to visualize the dagger structure in their own ways to convey the message. I tried to tackle this problem with Scabbard.
 
@@ -71,7 +70,7 @@ Project is fully written in Kotlin and it enabled me to build better APIs (DSL) 
 
 ### Cheat sheet
 
-Below is the example `AppComponent` used as a base for building graph and its attributes (please `open in new tab` for better quality). There is a plan to provide a better detailed cheat sheet to help in understanding the graph better, contributions welcome!
+Below is the example `AppComponent` used as a base for building graph and its attributes (please `Open in new tab` for better quality). There is a plan to provide a better detailed cheat sheet to help in understanding the graph better, contributions welcome!
 
 {% include images_center.html url="https://github.com/arunkumar9t2/scabbard/raw/master/docs/images/temp-cheat-sheat.png" %}
 
@@ -85,11 +84,11 @@ Scabbard can highlight `Missing Bindings` in red color which can be easily used 
 
 {% include images_center.html url="https://github.com/arunkumar9t2/scabbard/raw/master/docs/images/missing-binding.png" caption="Missing bindings"%}
 
-#### Google IO 2019
+#### [Google IO 2019](https://github.com/google/iosched)
 
 {% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/io_appcomponent.png" caption="AppComponent"%}
 
-#### Plaid
+#### [Plaid](https://github.com/android/plaid)
 
 {% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/plaid_home.png" caption="HomeComponent"%}
 
