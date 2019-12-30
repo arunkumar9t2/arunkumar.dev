@@ -32,9 +32,6 @@ jobs:
       - name: Install Firebase
         run: npm install -g firebase-tools
       
-      - name: Prepare environment
-        run : JEKYLL_ENV=production
-
       - name: Build and deploy website
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
@@ -42,6 +39,6 @@ jobs:
           echo "Cleaning project"
           bundle exec jekyll clean
           echo "Building project"
-          bundle exec jekyll build
+          JEKYLL_ENV=production bundle exec jekyll build
           echo "Deploying to Firebase"
           firebase deploy --token "$FIREBASE_TOKEN"
