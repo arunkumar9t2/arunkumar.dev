@@ -45,13 +45,13 @@ In order to get to the point shown in above videos, Scabbard has 3 different com
 
 * **Scabbard Gradle Plugin** - A gradle plugin to abstract away internal implementation details required in setting up the above processor and also acts as an API to configure Scabbard behavior. Being a Gradle plugin allows it do stuff that is otherwise not possible with pure annotation processors.
 
-* **Scabbard IntelliJ Plugin** - A IntelliJ plugin to link generated graphs back to their source code. This plugin also sets up stage for building any additional UI tools based on Dagger information in the future.
+* **Scabbard IntelliJ Plugin** - An IntelliJ plugin to link generated graphs back to their source code. This plugin also sets up stage for building any additional UI tools based on Dagger information in the future.
 
 ### Goals
 
 For Scabbard, I had the following goals in mind.
 
-* Establish ability to build informational tools with Dagger graph information - as mentioned above the IDE and Gradle plugins work together with shared knowledge to provide UX improvements. This can be easily extended to build additional tools (like linking `@Inject` with bindings).
+* Establish ability to build informational tools with Dagger graph information - as mentioned above the IDE and Gradle plugins work together with shared knowledge to provide UX improvements. This can be easily extended to build additional tools (~~like linking `@Inject` with bindings~~ this feature is now natively [available](https://medium.com/androiddevelopers/dagger-navigation-support-in-android-studio-49aa5d149ec9) as part of Android Studio since 4.1 Canary 07.).
 * Easy to use visualization - Scabbard aims to be simple to setup and tries to abstract away the internal implementation details involved in graph generation
 * Readable Graph information - it is very easy to end up in complicated graph diagrams which is technically correct but hard to decipher due to their complexity especially in large projects like _Grab's_. To tackle this, Scabbard splits the graph by `@Component` and `@Subcomponent` to keep the graphs small and understandable.
 * Opionated strucure - internal dagger representation can be inferred and represented in many different ways, Scabbard aims to start with a base representation and evolve it based on community feedback.
@@ -60,7 +60,7 @@ For Scabbard, I had the following goals in mind.
 
 #### GraphViz
 
-[GraphViz](https://www.graphviz.org/) is a popular tool for drawing graphs and Scabbard primarly uses it for generating images. In addition to `png` files, Scabbard generates a raw `dot` file which can be analyzed in variety of tools ([Gephi](https://gephi.org/) etc). Generating other formats like `svg` is planned.
+[GraphViz](https://www.graphviz.org/) is a popular tool for drawing graphs and Scabbard primarly uses it for generating images. In addition to `png` files, Scabbard generates a raw `dot` file which can be analyzed in variety of tools ([Gephi](https://gephi.org/) etc).
 
 #### Kotlin
 
@@ -72,11 +72,22 @@ Project is fully written in Kotlin and it enabled me to build better APIs (DSL) 
 
 Below is the example `AppComponent` used as a base for building graph and its attributes (please `Open in new tab` for better quality). There is a plan to provide a better detailed cheat sheet to help in understanding the graph better, contributions welcome!
 
-{% include images_center.html url="https://github.com/arunkumar9t2/scabbard/raw/master/docs/images/temp-cheat-sheat.png" %}
+{% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/dev.arunkumar.scabbard.di.AppComponent.svg" %}
 
 ### Highlights
 
 There are a lot to cover, below are some selected highlights and examples.
+
+#### Interactive Graphs with SVG
+
+> Available since 0.2.0
+
+Scabbard utilitizes hyperlinks available as part of SVG spec and enables navigation between `@Component` and `@Subcomponent` as shown below.
+
+<video width="100%" controls>
+  <source src="https://arunkumar9t2.github.io/scabbard/video/svg_sample.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 #### Visualizing errors
 
@@ -86,12 +97,12 @@ Scabbard can highlight `Missing Bindings` in red color which can be easily used 
 
 #### [Google IO 2019](https://github.com/google/iosched)
 
-{% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/io_appcomponent.png" caption="AppComponent"%}
+{% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/com.google.samples.apps.iosched.di.AppComponent.svg" caption="AppComponent"%}
 
 #### [Plaid](https://github.com/android/plaid)
 
-{% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/plaid_home.png" caption="HomeComponent"%}
+{% include images_center.html url="https://arunkumar9t2.github.io/scabbard/images/io.plaidapp.dagger.HomeComponent.svg" caption="HomeComponent"%}
 
 ### Summary
 
-Overall I am excited to ship `0.1.0` today and it has been challenging project with lots of stuff learnt particularly dagger internals. Hopefully it is helpful. Would love to hear feedback and iterate on it further. Please share your thoughts in the comments or [github issues](https://github.com/arunkumar9t2/scabbard/issues), or on [Twitter](https://twitter.com/arunkumar_9t2).
+Overall I am excited to share Scabbard with you and it has been challenging project with lots of stuff learnt particularly dagger internals. Hopefully it is helpful. Would love to hear feedback and iterate on this further. Please share your thoughts in the comments or [Github issues](https://github.com/arunkumar9t2/scabbard/issues), or on [Twitter](https://twitter.com/arunkumar_9t2).
