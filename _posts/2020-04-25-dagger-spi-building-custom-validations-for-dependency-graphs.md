@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Dagger SPI - Building custom validations for Dependency Graphs
+title: Dagger SPI - Extending Dagger with custom Dependency Graph validations
 date: 2020-04-25 08:18 +0800
+description: Exploring how Dagger can be extended to add project specific dependency graph valditations for even more robust compile time verification.
 categories: [Android, Dagger, Library]
-image : /assets/images/scabbard-banner.png
+image : /assets/images/dagger-spi-header.png
 ---
 In one of recent Dagger versions, Google added support for processing internal Dagger dependency graph information as part of the `dagger-spi` artifact (also read [SPI vs API](https://stackoverflow.com/questions/2954372/difference-between-spi-and-api)). According to the [docs](https://Dagger.dev/dev-guide/spi), it allows us access to the same model information that Dagger internally uses and lets us add few functionality on top of Dagger's compiler - like a plugin. Recently I used this functionality to [build a tool](https://arunkumar.dev/introducing-scabbard-a-tool-to-visualize-dagger-2-dependency-graphs/) that visualizes how the overall dependency graph of your project is structured. In this article, I plan to discuss one other functionality of the SPI artifact (validations) and explain how to consume this SPI from scratch.
 
@@ -65,6 +66,8 @@ Before jumping to implementation details, I think it helps to talk a bit about s
 #### Diagnostic Reporter
 
 Based on data from `BindingGraph` we can report our custom validation result using [`DiagnosticReporter`](https://github.com/google/dagger/blob/master/java/dagger/spi/DiagnosticReporter.java). The API is straight forward - for the `Node`s or `Edge`s we think are invalid, we call one of the `reportXXX()` methods and Dagger will format that error in a neat way and fail the build or warn accordingly.
+
+In addition to these, there are also `Filer`, `Types`, `Elements` and an option map are provided. `Filer` can be used to generate files and `Types`, `Elements` give access to type system which we can use if needed.
 
 ### Setting up the project
 
@@ -138,7 +141,7 @@ Similar to Dagger, there is a way for us to customize our validation behavior ba
 
 {% include images_center.html url="/assets/images/dagger-spi-options.png" caption="BindingGraphPlugin options flow"%}
 
-First, we declare all the supported options via `supportedOptions()` as `Set<String>`. Dagger then uses this information to filter out raw options received from compiler and then calls `initOptions`. It is good practice to properly namespace the option key for clarity. For example, instead of simply stating `enabled`, we could expose `trident.enabled` which is much clearer in intention. Personally, I don't much prefer working with `Map<String, String>` for options. It is better to abstract the options into type safe data structure. One such way is shown below.
+First, we declare all the supported options via `supportedOptions()` as `Set<String>`. Dagger then uses this information to filter out raw options received from compiler and then calls `initOptions`. It is good practice to properly namespace the option key for clarity. For example, instead of simply stating `enabled`, we could expose `trident.enabled` which is much clearer in intention. Personally, I don't much prefer working with `Map<String, String>` for options. It is better to abstract the options into a type safe data structure. One such way is shown below.
 
 ```kotlin
 /**
