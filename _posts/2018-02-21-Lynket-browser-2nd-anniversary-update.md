@@ -10,7 +10,7 @@ image: https://cdn-images-1.medium.com/max/2000/1*9EiFLkWltIEqE59QIwBDBA.png
   
 I would like to introduce you to my open source Android app **Chromer**, now called Lynket. In this article, I want to talk about how Lynket does things differently and tries to remain relevant among top browsers such as Chrome, Brave, Firefox, Samsung Internet or Opera etc.
 
-{% include youtube_embed.html url="https://www.youtube.com/embed/PbB6ChrkMnE" %}
+{% include youtube_embed.html url="https://www.youtube.com/embed/Hcd2R2Lh5ks" %}
   
 ### Brief history
 

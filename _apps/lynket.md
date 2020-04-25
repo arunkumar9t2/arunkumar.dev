@@ -7,6 +7,6 @@ description: >
     Free and open source. [Media 1](https://www.androidpolice.com/2018/02/27/hands-chromer-becomes-lynket-plenty-additions-version-2-0/), [Media 2](https://www.androidauthority.com/best-android-browsers-320252/).
 playstore : https://play.google.com/store/apps/details?id=arun.com.chromer&utm_source=arunkumarsampath.in
 github: https://github.com/arunkumar9t2/lynket-browser
-youtube: https://www.youtube.com/watch?v=PbB6ChrkMnE
+youtube: https://www.youtube.com/watch?v=Hcd2R2Lh5ks
 ordering: 1
 ---
