@@ -64,4 +64,4 @@ As expected, the component became the subcomponent of `ApplicationComponent`. *A
 
 ### Summary
 
-In addition to these new features, there have been couple of minor bug fixes as well which are described in release notes. Overall I am excited for this release and would be glad to hear any feedback or suggestions for improvements. Please reach out to me via Twitter, Email or comments below, thanks and stay safe!
+In addition to these new features, there have been couple of minor bug fixes as well which are described in [release notes](https://github.com/arunkumar9t2/scabbard/releases/tag/0.4.0). Overall I am excited for this release and would be glad to hear any feedback or suggestions for improvements. Please reach out to me via Twitter, Email or comments below, thanks and stay safe!
