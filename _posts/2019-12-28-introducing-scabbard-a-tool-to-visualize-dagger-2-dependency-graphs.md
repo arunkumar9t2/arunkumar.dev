@@ -10,7 +10,7 @@ image : /assets/images/scabbard-banner.png
 I am excited to announce [Scabbard](https://arunkumar9t2.github.io/scabbard/), a tool to visualize Dagger 2 dependency graphs. Here's Scabbard in action:
 
 <video width="100%" controls>
-  <source src="https://github.com/arunkumar9t2/scabbard/raw/master/docs/video/ViewComponent.mp4" type="video/mp4">
+  <source src="https://arunkumar9t2.github.io/scabbard/video/scabbard-demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
