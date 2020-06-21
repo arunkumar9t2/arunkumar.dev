@@ -24,7 +24,7 @@ While Scabbard's image generation [worked](https://twitter.com/arunkumar_9t2/sta
 
 Scabbard will show a gutter icon on Android entry point annotated components that links to the equivalent Hilt generated component as shown here.
 
-{% include images_center.html url="/assets/images/android-entry-point-sample.png" caption="Scabbard Gutter for Android Entry Points"%}
+{% include images_center.html url="/assets/images/android-entry-point-activity-sample.png" caption="Scabbard Gutter for Android Entry Points"%}
 
 ##### `@WithFragmentBindings`
 
