@@ -191,7 +191,7 @@ img.article-image {
 
 .post-meta {
   font-family: 'Roboto Mono';
-  font-size: 13px; 
+  font-size: 13px;
   font-weight: 500;
   display: flex;
   flex-direction: row;
@@ -235,7 +235,7 @@ img.article-image {
     font-weight: 400;
   }
 
-  .mdl-card__supporting-text{
+  .mdl-card__supporting-text {
     padding: 0px 16px 0px 16px;
   }
 
@@ -272,11 +272,37 @@ img.article-image {
     font-weight: 400;
   }
 
-  .mdl-card__supporting-text{
+  .mdl-card__supporting-text {
     padding: 0px 16px 0px 16px;
   }
 
   .library-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .mdi {
+      font-size: 24px;
+      display: block;
+    }
+
+    a {
+      margin: 0 8px 0 8px;
+    }
+  }
+}
+
+.talks-card {
+  .mdl-card__title-text {
+    font-weight: 400;
+  }
+
+  .mdl-card__supporting-text {
+    padding: 0px 16px 0px 16px;
+  }
+
+  .talks-links {
     margin-top: auto;
     display: flex;
     flex-direction: row;
@@ -300,6 +326,10 @@ img.article-image {
 
   &.adb {
     color: #ffdb58;
+  }
+
+  &.speaking {
+    color: #2196F3;
   }
 
   &.github:hover {
@@ -333,6 +363,10 @@ img.article-image {
 
   &.rss:hover {
     color: #f26522 !important;
+  }
+
+  &.presentation:hover {
+    color: #43A047 !important;
   }
 }
 
@@ -470,7 +504,7 @@ img.article-image {
     top: 16px;
   }
 
-  .mdl-card__supporting-text{
+  .mdl-card__supporting-text {
     padding: 0px 16px 16px 16px;
   }
 

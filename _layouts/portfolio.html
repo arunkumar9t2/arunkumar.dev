@@ -31,7 +31,7 @@ layout: default
 
         {% if app.github %}
         <a href="{{app.github}}">
-          <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
+          <span class="mdi mdi-github mdl-color-text--grey-600 github"></span>
         </a>
         {% endif %}
 
@@ -62,7 +62,35 @@ layout: default
       <div class="library-links mdl-card__actions mdl-card--border">
         {% if library.github %}
         <a href="{{library.github}}">
-          <span class="mdi mdi-github-circle mdl-color-text--grey-600 github"></span>
+          <span class="mdi mdi-github mdl-color-text--grey-600 github"></span>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    {%- endfor -%}
+  </div>
+  <h4 class="portfolio-header mdl-color-text--grey-900" id="public-speaking">
+    <span class="mdi mdi-account-tie-voice speaking"></span> Public Speaking
+  </h4>
+  <div class="mdl-grid talks">
+    {% assign talks = site.talks | sort: 'ordering' %}
+    {%- for talk in talks -%}
+    <div class="talks-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+      <div class="mdl-card__media">
+        <img class="article-image" src="{{ talk.image | prepend: site.baseurl}}" border="0" alt="" />
+      </div>
+      <div class="mdl-card__title">
+        <h5 class="mdl-card__title-text">
+          {{ talk.name | escape }}
+        </h5>
+      </div>
+      <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+        <p>{{ talk.published | escape }}</p>
+      </div>
+      <div class="talks-links mdl-card__actions mdl-card--border">
+        {% if talk.link %}
+        <a href="{{talk.link}}">
+          <span class="mdi mdi-presentation-play mdl-color-text--grey-600 presentation"></span>
         </a>
         {% endif %}
       </div>

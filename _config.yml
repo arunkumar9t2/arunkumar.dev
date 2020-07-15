@@ -45,6 +45,8 @@ collections:
     title: Android
   os:
     title: Open Source Work
+  talks:
+    tilte: Speaking
 
 sass:
   style: compact
