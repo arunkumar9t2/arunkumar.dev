@@ -38,6 +38,7 @@ defaults:
     values:
       is_post: false
       comments: false
+      image: /assets/images/arunkumar-header.png
 
 # Collections
 collections:
@@ -50,3 +51,8 @@ collections:
 
 sass:
   style: compact
+
+author:
+  twitter: arunkumar_9t2
+twitter:
+  username: arunkumar_9t2

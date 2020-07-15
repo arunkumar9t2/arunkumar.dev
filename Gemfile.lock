@@ -108,7 +108,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed
   jekyll-gist
-  jekyll-seo-tag
+  jekyll-seo-tag (~> 2.6.1)
   jekyll-sitemap
   jemoji
   tzinfo (~> 1.2)
