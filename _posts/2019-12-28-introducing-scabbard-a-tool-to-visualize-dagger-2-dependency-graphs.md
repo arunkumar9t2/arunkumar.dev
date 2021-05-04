@@ -17,7 +17,7 @@ I am excited to announce [Scabbard](https://arunkumar9t2.github.io/scabbard/), a
 Here is an advanced example from [Google's I/O 19](https://github.com/google/iosched) app:
 
 <video width="100%" controls>
-  <source src="https://github.com/arunkumar9t2/scabbard/raw/master/docs/video/iosched_appcomponent.mp4" type="video/mp4">
+  <source src="https://arunkumar9t2.github.io/scabbard/video/iosched_appcomponent.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -66,7 +66,7 @@ For Scabbard, I had the following goals in mind.
 
 Project is fully written in Kotlin and it enabled me to build better APIs (DSL) allowing me to concentrate on expressing the graph cleanly instead of worrying about API specifics. Scabbard also ships a `dot-dsl` artifact for writing dot files easily with Kotlin, example:
 
-{% include images_phone_screenshot.html url="https://github.com/arunkumar9t2/scabbard/raw/master/docs/images/dot-dsl.png" caption="Dot-dsl for constructing dot files in Kotlin"%}
+{% include images_phone_screenshot.html url="https://github.com/arunkumar9t2/scabbard/blob/main/docs/images/dot-dsl.png?raw=true" caption="Dot-dsl for constructing dot files in Kotlin"%}
 
 ### Cheat sheet
 
@@ -93,7 +93,7 @@ Scabbard utilitizes hyperlinks available as part of SVG spec and enables navigat
 
 Scabbard can highlight `Missing Bindings` in red color which can be easily used to point to why the error arises. Requires [full binding graph validation.](https://arunkumar9t2.github.io/scabbard/configuration/#enable-full-binding-graph-validation)
 
-{% include images_center.html url="https://github.com/arunkumar9t2/scabbard/raw/master/docs/images/missing-binding.png" caption="Missing bindings"%}
+{% include images_center.html url="https://github.com/arunkumar9t2/scabbard/blob/main/docs/images/missing-binding.png?raw=true" caption="Missing bindings"%}
 
 #### [Google IO 2019](https://github.com/google/iosched)
 
