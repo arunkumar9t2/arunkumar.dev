@@ -2,6 +2,9 @@
 layout: post
 title: Jetpack Compose for Non UI - Tree construction and source code generation
 date: 2021-05-07 02:03 +0800
+description: Exploring proof of concept to generate Graphviz dot files via Jetpack Compose tree management.
+categories: [Compose, Kotlin]
+image : /assets/images/compose-dot-header.png
 ---
 
 [Jepack Compose](https://developer.android.com/jetpack/compose) is two things - a smart tree management solution and a UI toolkit built on top of that tree management solution. 
