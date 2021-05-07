@@ -10,7 +10,7 @@ Jake Wharton sums it up well in his [article](https://jakewharton.com/a-jetpack-
 
 > What this means is that Compose is, at its core, a general-purpose tool for managing a tree of nodes of any type. Well a “tree of nodes” describes just about anything, and as a result Compose can target just about anything.
 
-Originally built for Android, it has already crossed boundaries into Desktop, Web and recently even [command line](https://github.com/JakeWharton/mosaic)(!) thanks to Kotlin Multiplatform and tree management abstraction.
+Originally built for Android, it has already crossed boundaries into [Desktop](https://www.jetbrains.com/lp/compose/), [Web](https://blog.jetbrains.com/kotlin/2021/05/technology-preview-jetpack-compose-for-web/) and recently even [command line](https://github.com/JakeWharton/mosaic)(!) thanks to Kotlin Multiplatform and tree management abstraction.
 
 While all of them are UI, I wanted to try and explore Compose's tree management capabilities for a non UI use case.
 
@@ -128,7 +128,7 @@ class NodeApplier(node: Node) : AbstractApplier<Node>(node) {
   }
 }
 ```
-Applier is only used to mutate the tree, but we still don't have a way to connect them with `@Composables`. Once we have the `Applier`, we need to create a `Composition` root so that other `@Composable` functions can be called. To put it simply, `@Composable` can be called only inside a `@Composable` function and `Composition` function helps in initating the root composition.
+`Applier` is only used to mutate the tree, but we still don't have a way to connect them with `@Composables`. Once we have the `Applier`, we need to create a `Composition` root so that other `@Composable` functions can be called. To put it simply, `@Composable` can be called only inside a `@Composable` function and `Composition` function helps in initating the root composition.
 
 ##### Composition
 
@@ -151,7 +151,7 @@ Once we have the root `Composition` we have a space to call `@Composable` functi
 
 ##### Compose Node
 
-Even though we have a root `Composition` to call `@Composable` functions this does not mean that any `@Composable` can be called here and doing so would result in `RuntimeException` since the `Applier` type would not match. 
+Even though we have a root `Composition` to call `@Composable` functions this does not mean that any `@Composable` can be called here and doing so would result in `RuntimeException` if the `Applier` type did not match. 
 
 ###### Creating Composable Functions
 
@@ -178,7 +178,7 @@ Now that we have basic idea of how to connect `@Composable` function calls to a 
 
 In my earlier [implementation](https://github.com/arunkumar9t2/scabbard/blob/81f6acb1366dd59fad91f299a808574f00bbe437/dot-dsl/src/main/kotlin/dev/arunkumar/dot/dsl/DotGraphBuilder.kt) of DSL, I had basic abstraction root as a `DotGraph : Statement` interface that can hold a children of `Statement`s. Then extensions functions with infix and trailing lamda allows to build the tree without superflous statements like `add()` etc.
 
-A `digraph "name" {}` can be abstracted as shown below.
+A `digraph "name" {}` statement can be abstracted as shown below.
 
 ```kotlin
 class DotGraph(private val header: String) : Statement() {
@@ -333,9 +333,9 @@ and generated image by passing the `.dot` file to `dot`:
 
 {% include images_center.html url="/assets/images/compose-dot-results.png" caption="Image generated with `dot` using the DSL output" %}
 
-The entire project setup with Gradle and results can be found here.
+> The entire project setup with Gradle and results can be found [here](https://github.com/arunkumar9t2/compose-dot).
 
-#### Compose advantages
+### Compose advantages
 
 `DSL` can also provide similar functionality of constructing such trees but how does it compare against `@Composable` functions? There are some key advantages
 
@@ -370,4 +370,10 @@ The entire project setup with Gradle and results can be found here.
    ```
    Here through use of `CompositionLocal`s it should be possible for childrent to access state from parents. It happens behind the scenes without changing the function signature.
 
-These are only few advantages and there are many more like parallel composition, caching etc. It would be interesting to explore `Recomposition` in a future article.
+### Future work
+
+While the current solution explores basic tree management, there are still plethora of things I want to explore further like async with coroutines, tree mutation, recompostion and parallel composition etc. Code generation might not be an exact fit for those things though.
+
+Would be glad to hear any feedback/concerns in the comments below, thanks.
+
+- Arun
