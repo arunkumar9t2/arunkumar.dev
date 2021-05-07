@@ -190,7 +190,7 @@ img.article-image {
 }
 
 .post-meta {
-  font-family: 'Roboto Mono';
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   font-weight: 500;
   display: flex;
@@ -626,6 +626,7 @@ img.article-image {
 
   code {
     font-size: 14px;
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
