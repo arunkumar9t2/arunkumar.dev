@@ -21,7 +21,7 @@ While all of them are UI, I wanted to try and explore Compose's tree management 
 
 Code generation is undeniably a common use case in software development and usually done via generation libraries like [JavaPoet](https://github.com/square/javapoet) or [KotlinPoet](https://github.com/square/kotlinpoet) so that we have sufficient type safety and safeguard around corner cases. 
 
-In this article, we utilise Jetpack Compose's tree management capabilities to generate code for GraphViz's `dot` file format. I already have one [implementation](https://github.com/arunkumar9t2/scabbard/tree/main/dot-dsl) of `dot` file generation using DSLs in one of my other [projects](https://arunkumar9t2.github.io/scabbard/) so it lets me draw parallels and compare how Jetpack Compose might help here.
+In this article, we utilise Jetpack Compose's tree management capabilities to generate code for GraphViz's `dot` file format. I already have one Kotlin [implementation](https://github.com/arunkumar9t2/scabbard/tree/main/dot-dsl) of `dot` file generation using DSLs in one of my other [projects](https://arunkumar9t2.github.io/scabbard/) so it lets me draw parallels and compare how Jetpack Compose might help here. A basic understanding on Jetpack Compose would be helpful to the reader.
 
 The final solution might look like below
 
@@ -62,7 +62,7 @@ digraph "Hello" {
 
 ### Code Generation
 
-Programming language source codes are usually represented as an [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) in various phases be it during compilation, IDE support, editing etc. Each node of that tree represents important bits of information like keywords and identifiers etc. 
+Programming language source codes are usually represented as an [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) in various phases be it during compilation, IDE support ([PSIElement](https://plugins.jetbrains.com/docs/intellij/psi-elements.html)), editing etc. Each node of that tree represents important bits of information like keywords and identifiers etc. 
 
 Lets consider the following function
 
@@ -101,11 +101,11 @@ Adds nodes emitted by `Function²()` and `Return()` as children to root node `Fu
 
 #### Applier, Composition and Compose Nodes 
 
-Compose has few APIs that allows us to add capabilties to manage tree of any type. 
+Compose has few APIs that allows us to add capabilties to manage tree of any type, let's go about them one by one.
 
 ##### Applier
 
-The entry point to this is the `Applier` [interface](https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:compose/runtime/runtime/src/commonMain/kotlin/androidx/compose/runtime/Applier.kt) which will be used by Compose compiler plugin to modify the tree. We have full freedom to choose the tree implementation of our choice, the `Applier` abstraction simply gives callbacks at the right places to modify the tree way we want.
+The entry point to tree management is the `Applier` [interface](https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:compose/runtime/runtime/src/commonMain/kotlin/androidx/compose/runtime/Applier.kt) which will be used by Compose compiler plugin to modify the tree. We have full freedom to choose the tree implementation of our choice, the `Applier` abstraction simply gives callbacks at the right places to modify the tree way we want.
 
 A simple implementation of `Applier` that can add nodes to a tree looks like below.
 
