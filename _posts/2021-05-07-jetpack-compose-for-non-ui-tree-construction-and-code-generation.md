@@ -272,7 +272,7 @@ fun DirectedGraph(
 }
 ```
 
-The `setContent` call kicks of the composition. I should note that it might be useful to retain the `Composition` instance hence the method returns both the root node of the tree and the `Composition`.
+The `setContent` call kicks off the composition. I should note that it might be useful to retain the `Composition` instance hence the method returns both the root node of the tree and the `Composition`.
 
 ##### Graph Composables
 
@@ -376,6 +376,8 @@ and generated image by passing the `.dot` file to `dot`:
 ### Future work
 
 While the current solution explores basic tree management, there are still plethora of things I want to explore further like async with coroutines, tree mutation, recompostion and parallel composition etc. Code generation might not be an exact fit for those things though.
+
+Additionally, Compose has concept of `Modifier`s to add additional node attributes. For example `shape = rectangle` for dot node could be a `Modifier` instead but I chose to avoid it since I wanted to retain ability to add any type of attribute with less code. But still `Modifier` is a valid usecase and I intend to explore them further.
 
 Would be glad to hear any feedback/concerns in the comments below, thanks.
 
