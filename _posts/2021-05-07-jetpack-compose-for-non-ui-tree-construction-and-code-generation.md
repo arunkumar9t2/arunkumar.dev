@@ -33,7 +33,7 @@ DirectedGraph("Hello") {
   Cluster("Container A") {
     "A" link "B"
   }
-  Cluster() {
+  Cluster("Container B") {
     "C" link "D"
   }
   "A" link "D"
