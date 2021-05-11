@@ -175,6 +175,8 @@ fun Root(content: @Composable () -> Unit) {
 
 The call site for this function looks like `Root {}` similar to inbuilt composables. Invoking this function multiple times *emits* child nodes in the tree at right places.
 
+[Google Code sample for managing a generic tree.](https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:compose/runtime/runtime/samples/src/main/java/androidx/compose/runtime/samples/CustomTreeCompositionSamples.kt)
+
 Now that we have basic idea of how to connect `@Composable` function calls to a Tree type, in the remainder of the article we explore how to build `dot` language composables.
 
 ### Expressing Dot format as @Composables
