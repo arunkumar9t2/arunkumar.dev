@@ -655,3 +655,14 @@ video {
   margin: 10px auto;
   display: block;
 }
+
+@media (max-width: 479px) {
+  .mdl-grid{
+    padding: 0px;
+  }
+  .post-container {
+    max-width: 1600px; 
+    width: calc(100% - 0px);
+    margin: 0 auto;
+  }
+}
