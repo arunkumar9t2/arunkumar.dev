@@ -12,7 +12,7 @@ I like [Realm](https://realm.io) mobile database. I first started using `Realm` 
 However not all of these were smooth sailing in my opinion, particularly **paging, lifecycle and threading**. `Realm`'s live object model i.e at any point in time, we interact with the live view of the underlying database and objects are brought into memory only when they are read like `Object.getPropery()` (lazy by default). For paging, `Realm` initially recommended that it can be fast enough to read objects inside a `RecyclerView.Adapter.getItem()` call (this pattern is no longer recommended). I disagree with it since storage performance is highly variable (a background Play Store update can bring storage performance to its knees) and chances of ANR are high. 
 
 [Threading](https://docs.mongodb.com/realm/sdk/android/advanced-guides/threading/) is not straight forward and had few rules that need to be followed. 
-* `Realm` instances and the results `RealmResults` should not cross thread boundaries and each `Realm` instance carried a lifecycle with it (should call `close()` when done.
+* `Realm` instances and the results `RealmResults` should not cross thread boundaries and each `Realm` instance carried a lifecycle with it should call `close()` when done.
 * `Realm` objects can be observed only on a thread that has Android's [Looper](https://developer.android.com/reference/android/os/Looper) [prepared](https://developer.android.com/reference/android/os/Looper#prepare()) on them.
  
 Because of these rules, writing `Realm` database code carried a bit of ceremony around it especially considering Android's already extensive lifecyle expectations.
@@ -68,7 +68,7 @@ persons.addChangeListener{ } // 3
 realm.close() // 4
 
 ```
-This looks straight-forward but as soon as threading is introduced, couple of challenges arise. Namely `1`,`2`,`3`,`4` should be on the same thread. Since `2` is a database operation, our instinct should be to move this entire operation to background thread and we would be correct. However if we want to observe any changes in `3` it would crash since the background thread most likely would not have `Looper` by default. The official solution to this problem is to explictly use `*Async` APIs like `findAllAsync()` etc. This works for most cases but still has room for developer errors due to lack of checks especially in changes observation due to ties to Android Looper.
+This looks straight-forward but as soon as threading is introduced, couple of challenges arise. Namely, `1`,`2`,`3`,`4` should be on the same thread. Since `2` is a database operation, our instinct should be to move this entire operation to background thread, and we would be correct. However if we want to observe any changes in `3` it would crash since the background thread most likely would not have `Looper` by default. The official solution to this problem is to explicitly use `*Async` APIs like `findAllAsync()` etc. This works for most cases but still has room for developer errors due to lack of checks especially in changes observation due to ties to Android Looper.
 
 ##### Deferred Execution
 
@@ -176,14 +176,14 @@ val persons = realm.where<Person>().findAll()
 ```
 Here `persons` can contain 1 million entries but not all are brought into memory, they are read only when `persons.get(index)` is called, if one were to bind this to a `RecyclerView` only items in the view port would be read (nifty!). This feature alone would satisfy [PositionalDataSource](https://developer.android.com/reference/android/arch/paging/PositionalDataSource) expectations that the implementation should be able to read data at any arbitary position. 
 
-Since paging can invole complicated threading, `compass`'s default implementation detaches the object from `Realm` using `Realm.copyFromRealm`, this makes it easy to apply any further [transformations](https://developer.android.com/topic/libraries/architecture/paging/v3-transform) as needed without concern on threading. 
+Since paging can involve complicated threading, `compass`'s default implementation detaches the object from `Realm` using `Realm.copyFromRealm`, this makes it easy to apply any further [transformations](https://developer.android.com/topic/libraries/architecture/paging/v3-transform) as needed without concern on threading. 
 
 As mentioned earlier, `copyFromRealm` is expensive for large nested objects and it is advised to take advantage of `Realm`'s lazy loading to bring only needed data to memory, this is done via [RealmModelTransform](https://arunkumar9t2.github.io/compass/compass/dev.arunkumar.compass/index.html#-1272439111/Classlikes/1670650899) API.
 
 ```kotlin
 public typealias RealmModelTransform<T, R> = Realm.(realmModel: T) -> R
 ```
-`compass` provides `ReamlCopyTransform` which does simply copying as shown below
+`compass` provides `ReamlCopyTransform` which does simply copying as shown below.
 ```kotlin
 public fun <T : RealmModel, R> RealmCopyTransform(): RealmModelTransform<T, R> {
   return { model -> copyFromRealm(model) as R }
@@ -302,7 +302,7 @@ In comparison, `compass`'s API `RealmQuery { where<Task>() }.asFlow { it.id }` a
 
 #### Possible improvements
 
-`compass`'s paging, currently does not take advantage of fine-grained notifications from `Realm` and still relies on `DiffUtil` / Composition Keys to perform updates. Through some carefuly structuring it should be possible to implement changes without needing to manually calculate changeset. 
+`compass`'s paging, currently does not take advantage of fine-grained notifications from `Realm` and still relies on `DiffUtil` / Composition Keys to perform updates. Through some carefull structuring it should be possible to implement changes without needing to manually calculate changeset. 
 
 > Compass is available here: <https://github.com/arunkumar9t2/compass>
 
