@@ -656,6 +656,14 @@ video {
   display: block;
 }
 
+video.phone {
+  width: 45%;
+}
+
+.root-layout.is-small-screen video.phone  {
+  width: 95%;
+}
+
 @media (max-width: 479px) {
   .mdl-grid{
     padding: 0px;
