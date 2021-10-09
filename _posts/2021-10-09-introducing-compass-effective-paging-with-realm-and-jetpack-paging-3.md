@@ -4,7 +4,7 @@ title: 'Introducing Compass: Effective Paging with Realm and Jetpack Paging 3'
 date: 2021-10-09 03:59 +0800
 description: Compass provides a set of Kotlin types and extensions to make working with Realm mobile database easier.
 categories: [Android, Kotlin]
-image : /assets/images/compose-dot-header.png
+image : /assets/images/compass.png
 ---
 
 I like [Realm](https://realm.io) mobile database. I first started using `Realm` at a time when there were limited options for a reactive database - a feature common today with tools like [Room](https://developer.android.com/jetpack/androidx/releases/room) and [SqlDelight](https://github.com/cashapp/sqldelight/) (remember [SqlBrite](https://github.com/square/sqlbrite)?). With reactivity, `Realm` was pushing for [persistence as single source of truth](https://docs.mongodb.com/realm/sdk/android/quick-start-local/#complete-example) much earlier than the pattern caught on if I recall correctly. `Realm`'s reactivity is [fine grained](https://docs.mongodb.com/realm/sdk/android/examples/react-to-changes/#register-a-collection-change-listener) as well i.e can emit added, removed or modified changes on a collection without tools like [DiffUtil](https://developer.android.com/reference/androidx/recyclerview/widget/DiffUtil) and with correct usage it can integrate directly with [RecyclerView](https://developer.android.com/guide/topics/ui/layout/recyclerview). Apart from being reactive, it is an [object oriented database](https://docs.mongodb.com/realm/sdk/android/examples/define-a-realm-object-model/), so relations can be directly expressed as Java/Kotlin objects and has a capable [query](https://docs.mongodb.com/realm/sdk/android/fundamentals/query-engine/) system with support for aggregations and backlinks. 
